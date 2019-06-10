@@ -4,7 +4,7 @@ import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 HOST = 'irc.netgamers.org' #irc server
-PORT = 6665 #port
+PORT = 6667 #port
 NICK = 'testbot1234'
 USERNAME = 'testbot1234'
 REALNAME = 'little pony'
