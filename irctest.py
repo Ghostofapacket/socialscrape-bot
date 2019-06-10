@@ -6,7 +6,7 @@ import random
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 HOST = 'irc.netgamers.org' #irc server
 PORT = 6667 #port
-NICK = 'ibot' + random.randint(1,101)
+NICK = 'ibot' + str(random.randint(1,101))
 USERNAME = 'Igloo'
 REALNAME = 'little pony'
 
