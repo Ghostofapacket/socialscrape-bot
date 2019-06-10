@@ -36,7 +36,6 @@ class IRC(threading.Thread):
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server.connect((self.server_name, self.server_port))
         #self.server.send(str(('NICK', '{nick}'.format(nick=self.nick))).encode())
-        settings.logger.log('Connected to ' + self.server_name + ' as ' + self.nick)
         self.send('USER', '{nick} {nick} {nick} :I am a bot; '
                            'https://github.com/Ghostofapacket/iBot/.'
                    .format(nick=self.nick, channel_main=self.channel_bot))
@@ -44,11 +43,13 @@ class IRC(threading.Thread):
         self.send('NICK', '{nick}'.format(nick=self.nick))
         self.send('JOIN', '{channel_bot}'.format(
              channel_bot=self.channel_bot))
-        # self.send('PRIVMSG', 'Version {version}.'
-        #           .format(version=settings.version), self.channel_bot)
+        self.send('PRIVMSG', 'Version {version}.'
+                  .format(version=settings.version), self.channel_bot)
 
-        # self.start_pinger()
-        # self.listener()
+        self.start_pinger()
+        self.listener()
+        settings.logger.log('Connected to ' + self.server_name + ' as ' + self.nick)
+
 
     def start_pinger(self):
         self.pinger = threading.Thread(target=self.pinger)
