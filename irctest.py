@@ -24,6 +24,7 @@ s.send(nick_cr)
 usernam_cr= ('USER megadeath megadeath megadeath :rainbow pie \r\n').encode()
 s.send(usernam_cr)
 #s.send('JOIN ##ibot \r\n'.encode()) #chanel
+time.sleep(1)
 s.send(bytes("JOIN #ibot \n", "UTF-8"))
 
 while 1:
