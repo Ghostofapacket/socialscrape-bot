@@ -2,6 +2,7 @@
 
 import socket
 import random
+import time
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 HOST = 'irc.netgamers.org' #irc server
