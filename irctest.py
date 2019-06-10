@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import socket
+import random
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 HOST = 'irc.netgamers.org' #irc server
