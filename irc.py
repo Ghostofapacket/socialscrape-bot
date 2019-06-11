@@ -110,7 +110,7 @@ class IRC(threading.Thread):
         jobid = sha_1.hexdigest()
         return jobid
 
-    def run_snscrape(self, user, module, args, target):
+    def run_snscrape(self, user, module, target):
         getjobid(user + '-' + module + '-' + target)
         settings.logger.log('SNSCRAPE - Job ID {jobid}'.format(**locals()))
         settings.logger.log('SNSCRAPE - Trying to run snscrape with the following arguments - {module} - {target}' \
@@ -146,33 +146,28 @@ class IRC(threading.Thread):
             # Get the site to scrape
             try:
                 function = command[1]
-                try:
+                if function == 'twitter':
+                    # twit twoo
+                    module = command[1]
                     target = command[2]
-                    if command[1] == 'twitter':
-                        # twit twoo
-                        module = command[1]
-                        target = command[2]
-                        try:
-                            args = command[3]
-                            self.run_snscrape(user, module, args, target)
-                        except IndexError:
-                            self.run_snscrape(user, module, target)
+                    try:
+                        args = command[3]
+                        self.run_snscrape(user, module, target)
+                    except IndexError:
+                        self.run_snscrape(user, module, target)
 
-                    if command[1] == 'instagram':
-                        # sendnudez
-                        settings.logger.log('gram')
-                    if command[1] == 'gab':
-                        # whatevenisgab?
-                        settings.logger.log('gab')
-                    if command[1] == 'vkontakte':
-                        # imgonatakte
-                        settings.logger.log('vkon')
-                    if command[1] == 'facebook':
-                        # faceballs
-                        settings.logger.log('faceballs')
-                except IndexError:
-                    self.send('PRIVMSG', user + ': Missing target; try ' + self.nick + ' snscrape facebook Igloo' \
-                             .format(user=user), channel)
+                if function == 'instagram':
+                    # sendnudez
+                    settings.logger.log('gram')
+                if function == 'gab':
+                    # whatevenisgab?
+                    settings.logger.log('gab')
+                if function == 'vkontakte':
+                    # imgonatakte
+                    settings.logger.log('vkon')
+                if function == 'facebook':
+                    # faceballs
+                    settings.logger.log('faceballs')
             except IndexError:
                 self.send('PRIVMSG', user + ': Missing site; try ' + self.nick + ' snscrape facebook,gab,instagram'\
                           + ',twitter,vkontake etc'.format(user=user), channel)
