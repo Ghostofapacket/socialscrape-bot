@@ -111,7 +111,7 @@ class IRC(threading.Thread):
         return jobid
 
     def run_snscrape(self, user, module, target):
-        getjobid(user + '-' + module + '-' + target)
+        self.getjobid(user + '-' + module + '-' + target)
         settings.logger.log('SNSCRAPE - Job ID {jobid}'.format(**locals()))
         settings.logger.log('SNSCRAPE - Trying to run snscrape with the following arguments - {module} - {target}' \
                             .format(**locals()))
