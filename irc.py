@@ -117,7 +117,7 @@ class IRC(threading.Thread):
         settings.logger.log('SNSCRAPE - Job ID '+ jobid)
         settings.logger.log('SNSCRAPE - Trying to run snscrape with the following arguments - {module} - {target}' \
                             .format(**locals()))
-        subprocess.run(["snscrape " + module + " " + target + " >" + jobid])
+        subprocess.run(["/usr/local/bin/snscrape " + module + " " + target + " >" + jobid])
 
     def command(self, command, user, channel):
         if command[0] == 'help':
@@ -148,7 +148,7 @@ class IRC(threading.Thread):
             # Get the site to scrape
             try:
                 function = command[1]
-                if function == 'twitter':
+                if function == 'twitter-user':
                     # twit twoo
                     module = command[1]
                     target = command[2]
