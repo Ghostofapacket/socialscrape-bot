@@ -145,29 +145,34 @@ class IRC(threading.Thread):
         elif command[0] == 'snscrape':
             # Get the site to scrape
             try:
-                # function = command[1]
-                if command[1] == 'twitter':
-                    # twit twoo
-                    module = command[1]
+                function = command[1]
+                try:
                     target = command[2]
-                    try:
-                        args = command[3]
-                        self.run_snscrape(user, module, args, target)
-                    except IndexError:
-                        self.run_snscrape(user, module, target)
+                    if command[1] == 'twitter':
+                        # twit twoo
+                        module = command[1]
+                        target = command[2]
+                        try:
+                            args = command[3]
+                            self.run_snscrape(user, module, args, target)
+                        except IndexError:
+                            self.run_snscrape(user, module, target)
 
-                if command[1] == 'instagram':
-                    # sendnudez
-                    settings.logger.log('gram')
-                if command[1] == 'gab':
-                    # whatevenisgab?
-                    settings.logger.log('gab')
-                if command[1] == 'vkontakte':
-                    # imgonatakte
-                    settings.logger.log('vkon')
-                if command[1] == 'facebook':
-                    # faceballs
-                    settings.logger.log('faceballs')
+                    if command[1] == 'instagram':
+                        # sendnudez
+                        settings.logger.log('gram')
+                    if command[1] == 'gab':
+                        # whatevenisgab?
+                        settings.logger.log('gab')
+                    if command[1] == 'vkontakte':
+                        # imgonatakte
+                        settings.logger.log('vkon')
+                    if command[1] == 'facebook':
+                        # faceballs
+                        settings.logger.log('faceballs')
+                except IndexError:
+                    self.send('PRIVMSG', user + ': Missing target; try ' + self.nick + ' snscrape facebook Igloo' \
+                             .format(user=user), channel)
             except IndexError:
                 self.send('PRIVMSG', user + ': Missing site; try ' + self.nick + ' snscrape facebook,gab,instagram'\
                           + ',twitter,vkontake etc'.format(user=user), channel)
