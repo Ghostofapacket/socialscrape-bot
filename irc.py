@@ -107,7 +107,7 @@ class IRC(threading.Thread):
     def getjobid(self, user):
         sha_1 = hashlib.sha1()
         sha_1.update(user)
-        jobid = sha_1.hexdigtest())
+        jobid = sha_1.hexdigest()
         return jobid
 
     def run_snscrape(self, user, module, args, target):
@@ -161,9 +161,13 @@ class IRC(threading.Thread):
 
             if command[1] == 'instagram':
                 #sendnudez
+                settings.logger.log('gram')
             if command[1] == 'gab':
                 #whatevenisgab?
+                settings.logger.log('gab')
             if command[1] == 'vkontakte':
                 #imgonatakte
+                settings.logger.log('vkon')
             if command[1] == 'facebook':
                 #faceballs
+                settings.logger.log('faceballs')
