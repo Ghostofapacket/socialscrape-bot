@@ -9,8 +9,7 @@ import pytz
 import psutil
 import hashlib
 import subprocess
-#import snscraperun
-
+import datetime
 import settings
 
 
@@ -106,16 +105,19 @@ class IRC(threading.Thread):
 
     def getjobid(self, user):
         sha_1 = hashlib.sha1()
-        sha_1.update(user)
+        time = str(datetime.datetime.now()) + '-' + user
+        sha_1.update(time.encode('utf-8'))
         jobid = sha_1.hexdigest()
+        print(jobid)
+        settings.logger.log('SNSCRAPE - Job ID '+ jobid)
         return jobid
 
     def run_snscrape(self, user, module, target):
-        self.getjobid(user + '-' + module + '-' + target)
-        settings.logger.log('SNSCRAPE - Job ID {jobid}'.format(**locals()))
+        jobid = self.getjobid(user + '-' + module + '-' + target)
+        settings.logger.log('SNSCRAPE - Job ID '+ jobid)
         settings.logger.log('SNSCRAPE - Trying to run snscrape with the following arguments - {module} - {target}' \
                             .format(**locals()))
-        subprocess.run(["snscrape " + module + target + " >" + jobid])
+        subprocess.run(["snscrape " + module + " " + target + " >" + jobid])
 
     def command(self, command, user, channel):
         if command[0] == 'help':
