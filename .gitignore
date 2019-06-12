@@ -9,6 +9,9 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+# Jobs directory
+jobs/
+
 # Windows Installer files
 *.cab
 *.msi
