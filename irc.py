@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import socket
 import datetime
 import threading
@@ -9,8 +8,12 @@ import pytz
 import psutil
 import hashlib
 import subprocess
+import os
 import datetime
+from multiprocessing import Process, Queue
+
 import settings
+import abcalc
 
 
 class IRC(threading.Thread):
@@ -42,8 +45,8 @@ class IRC(threading.Thread):
         self.send('NICK', '{nick}'.format(nick=self.nick))
         self.send('JOIN', '{channel_bot}'.format(
              channel_bot=self.channel_bot))
-        self.send('PRIVMSG', 'Version {version}.'
-                  .format(version=settings.version), self.channel_bot)
+#        self.send('PRIVMSG', 'Version {version}.'
+#                  .format(version=settings.version), self.channel_bot)
         self.listener()
 
         self.start_pinger()
@@ -83,9 +86,9 @@ class IRC(threading.Thread):
                 settings.logger.log('Received message ' + message)
                 message_new = re.search(r'^[^:]+:(.*)$', message).group(1)
                 self.send('PONG', ':{message_new}'.format(**locals()))
-            elif re.search(r'^:.+PRIVMSG[^:]+:socialscr', message):
-                    if re.search(r'^:.+PRIVMSG[^:]+:socialscr .*', message):
-                        command = re.search(r'^:.+PRIVMSG[^:]+:socialscr (.*)', message) \
+            elif re.search(r'^:.+PRIVMSG[^:]+:socialbot', message):
+                    if re.search(r'^:.+PRIVMSG[^:]+:socialbot .*', message):
+                        command = re.search(r'^:.+PRIVMSG[^:]+:socialbot (.*)', message) \
                              .group(1).strip().split(' ')
                         command = [s.strip() for s in command if len(s.strip()) != 0]
                         user = re.search(r'^:([^!]+)!', message).group(1)
@@ -95,6 +98,19 @@ class IRC(threading.Thread):
                                                'channel': channel})
                         self.command(command, user, channel)
                         settings.logger.log('COMMAND - Received in channel {channel} - {command[0]}'.format(**locals()))
+            elif re.search(r'^:.+PRIVMSG[^:]+:socialbot\:', message):
+                    if re.search(r'^:.+PRIVMSG[^:]+:socialbot\: .*', message):
+                        command = re.search(r'^:.+PRIVMSG[^:]+:socialbot\: (.*)', message) \
+                             .group(1).strip().split(' ')
+                        command = [s.strip() for s in command if len(s.strip()) != 0]
+                        user = re.search(r'^:([^!]+)!', message).group(1)
+                        channel = re.search(r'^:[^#]+(#[^ :]+) ?:', message).group(1)
+                        self.commands_received.append({'command': command,
+                                               'user': user,
+                                               'channel': channel})
+                        self.command(command, user, channel)
+                        settings.logger.log('COMMAND - Received in channel {channel} - {command[0]}'.format(**locals()))
+
 
     def check_admin(self, user):
         # change to db
@@ -108,16 +124,106 @@ class IRC(threading.Thread):
         time = str(datetime.datetime.now()) + '-' + user
         sha_1.update(time.encode('utf-8'))
         jobid = sha_1.hexdigest()
-        print(jobid)
-        settings.logger.log('SNSCRAPE - Job ID '+ jobid)
         return jobid
 
-    def run_snscrape(self, user, module, target):
+    def run_snscrape(self, channel, user, module, target):
         jobid = self.getjobid(user + '-' + module + '-' + target)
-        settings.logger.log('SNSCRAPE - Job ID '+ jobid)
+        settings.logger.log('SNSCRAPE - Job ID ' + jobid)
+        self.send('PRIVMSG', '{user}: {jobid} has been queued.' .format(user=user, jobid=jobid), channel)
         settings.logger.log('SNSCRAPE - Trying to run snscrape with the following arguments - {module} - {target}' \
                             .format(**locals()))
-        subprocess.run(["/usr/local/bin/snscrape " + module + " " + target + " >" + jobid])
+        sanityregex = re.compile('([\"\'])')
+        if str(module).startswith("twitter"):
+            if str(module).startswith("twitter-user"):
+                settings.logger.log('SNSCRAPE - Checking username capitalisation for user ' + sanityregex.sub(r'',target))
+                try:
+                    newtarget = subprocess.check_output("snscrape --max-results 1 twitter-user " + sanityregex.sub(r'',target) + " | grep -Po '^https?://twitter\.com/\K[^/]+'", shell=True).decode("utf-8")
+                except subprocess.CalledProcessError as error:
+                    newtarget = None
+                if newtarget is None:
+                    settings.logger.log("SNSCRAPE - Twitter user " + sanityregex.sub(r'',target) + " not found")
+                    self.send('PRIVMSG', '{user}: Sorry, No results found for {jobid} - User does not exist' .format(user=user, jobid=jobid), channel)
+                else:
+                    settings.logger.log("SNSCRAPE - Running with updated settings - snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + module + " " + newtarget.strip() + " >jobs/twitter-@" + jobid)
+                    subprocess.run("snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + module + " " + newtarget.strip() + " >jobs/twitter-@" + jobid, shell=True)
+                    settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
+                    #Insert the profile as per JAA's request :-)
+                    outfile = open("jobs/twitter-@" + jobid, "r")
+                    profileline = "https://www.twitter.com/" + target + "\n"
+                    lines = []
+                    for line in outfile.read().split():
+                        lines.append(line + "\n")
+                    lines.insert(0,profileline)
+                    outfile.close()
+                    outfile=open("jobs/twitter-@" + jobid, "w")
+                    outfile.writelines(lines)
+                    outfile.close()
+                    uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-@" + jobid + " https://transfer.notkiska.pw/twitter-@" + newtarget, shell=True).decode("utf-8")
+
+            if str(module).startswith("twitter-hash"):
+                subprocess.run("snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + module + " " + sanityregex.sub(r'',target) + " >jobs/twitter-#" + jobid, shell=True)
+                settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
+                uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-#" + jobid + " https://transfer.notkiska.pw/twitter-#" + sanityregex.sub(r'',target), shell=True).decode("utf-8")
+                newtarget = sanityregex.sub(r'',target)
+
+            if not newtarget is None:
+                if uploadedurl.startswith("400"):
+                    self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid}'.format(user=user,jobid=jobid),channel)
+                elif uploadedurl.startswith("Could not upload empty file"):
+                    self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid}'.format(user=user,jobid=jobid),channel)
+                else:
+                    uploadedurl = uploadedurl.replace('%40','@')
+                    self.send('PRIVMSG', '!ao < {uploadedurl} --explain "For {user} - socialscrape job {jobid}" --concurrency 6 --delay 0' \
+                          .format(user=user, uploadedurl=uploadedurl, jobid=jobid), channel)
+
+        if str(module).startswith("instagram"):
+            if str(module).startswith("instagram-user"):
+                settings.logger.log("snscrape --format '{dirtyUrl}'  " + module + " " + sanityregex.sub(r'',target) + " >jobs/instagram-@" + jobid)
+                subprocess.run("snscrape --format '{dirtyUrl}'  " + module + " " + sanityregex.sub(r'',target) + " >jobs/instagram-@" + jobid, shell=True)
+                if not os.stat("jobs/instagram-@" + jobid).st_size == 0:
+                    settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-@" + sanityregex.sub(r'',target))
+                    #Insert the profile as per JAA's request :-)
+                    outfile = open("jobs/instagram-@" + jobid, "r")
+                    profileline = "https://www.instagram.com/" + target + "\n"
+                    lines = outfile.readlines()
+                    lines.insert(0,profileline)
+                    outfile.close()
+                    outfile=open("jobs/instagram-@" + jobid, "w")
+                    outfile.writelines(lines)
+                    outfile.close()
+                    uploadedurl = subprocess.check_output("curl -s --upload-file jobs/instagram-@" + jobid + " https://transfer.notkiska.pw/instagram-@" + sanityregex.sub(r'',target), shell=True).decode("utf-8")
+                    archivebotid = abcalc.jobid(uploadedurl)
+                    jobfile = "jobs/instagram-@" + jobid
+                else:
+                    self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid} - User does not exist'.format(user=user,jobid=jobid),channel)
+                    jobfile = "jobs/instagram-@" + jobid
+
+            if str(module).startswith("instagram-hashtag"):
+                subprocess.run("snscrape --format '{dirtyUrl}'  " + module + " " + sanityregex.sub(r'',target) + " >jobs/instagram-#" + jobid, shell=True)
+                if not os.stat("jobs/instagram-#" + jobid).st_size == 0:
+                    settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
+                    uploadedurl = subprocess.check_output("curl -s --upload-file jobs/instagram-#" + jobid + " https://transfer.notkiska.pw/instagram-%23" + sanityregex.sub(r'',target), shell=True).decode("utf-8")
+                    archivebotid = abcalc.jobid(uploadedurl)
+                    uploadedurl = uploadedurl.replace('%40','@')
+                    jobfile = "jobs/instagram-#" + jobid
+                else:
+                    self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid} - Hashtag does not exist'.format(user=user,jobid=jobid),channel)
+                    jobfile = "jobs/instagram-#" + jobid
+
+            if not os.stat(jobfile).st_size == 0:
+                #Should be standard for all jobs
+                if uploadedurl.startswith("400"):
+                    self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid}'.format(user=user,jobid=jobid),channel)
+                elif uploadedurl.startswith("Could not upload empty file"):
+                    self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid}'.format(user=user,jobid=jobid),channel)
+                else:
+                    uploadedurl = uploadedurl.replace('%40','@')
+                    self.send('PRIVMSG', '!a < {uploadedurl} --explain "For {user} - socialscrape job {jobid}"' \
+                          .format(user=user, uploadedurl=uploadedurl, jobid=jobid), channel)
+                    time.sleep(3)
+                    ignoreregex = "^https?://www\.instagram\.com/.*[?&]hl="
+                    self.send('PRIVMSG', '!ignore {jobid} {ignoreregex}' \
+                         .format(jobid=archivebotid,ignoreregex=ignoreregex),channel)
 
     def command(self, command, user, channel):
         if command[0] == 'help':
@@ -141,26 +247,36 @@ class IRC(threading.Thread):
         elif command[0] == 'snsupdate' and self.check_admin(user) == True:
             # Do the git pull and reload the module here
             settings.logger.log('WARNING: {user} has requested I update snscrape'.format(**locals()))
-            bot.send('PRIVMSG','Starting snscrape update')
+            self.send('PRIVMSG','Starting snscrape update')
             subprocess.run(["updatesnscrape.sh"])
-            bot.send('PRIVMSG','snscrape update complete')
+            self.send('PRIVMSG','snscrape update complete')
         elif command[0] == 'snscrape':
             # Get the site to scrape
             try:
                 function = command[1]
-                if function == 'twitter-user':
-                    # twit twoo
+                queue = Queue()
+                if function.startswith('twitter-'):
                     module = command[1]
                     target = command[2]
                     try:
                         args = command[3]
-                        self.run_snscrape(user, module, target)
+                        runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
+                        runsnscrape.start()
                     except IndexError:
-                        self.run_snscrape(user, module, target)
+                        runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
+                        runsnscrape.start()
 
-                if function == 'instagram':
+                if function.startswith('instagram'):
                     # sendnudez
-                    settings.logger.log('gram')
+                    module = command[1]
+                    target = command[2]
+                    try:
+                        args = command[3]
+                        runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
+                        runsnscrape.start()
+                    except IndexError:
+                        runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
+                        runsnscrape.start()
                 if function == 'gab':
                     # whatevenisgab?
                     settings.logger.log('gab')
@@ -173,4 +289,3 @@ class IRC(threading.Thread):
             except IndexError:
                 self.send('PRIVMSG', user + ': Missing site; try ' + self.nick + ' snscrape facebook,gab,instagram'\
                           + ',twitter,vkontake etc'.format(user=user), channel)
-
