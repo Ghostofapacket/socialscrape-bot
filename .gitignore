@@ -12,6 +12,9 @@ $RECYCLE.BIN/
 # Jobs directory
 jobs/
 
+# logfiles
+*.log
+
 # Windows Installer files
 *.cab
 *.msi
