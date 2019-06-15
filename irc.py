@@ -10,7 +10,8 @@ import hashlib
 import subprocess
 import os
 import datetime
-from multiprocessing import Process, Queue
+from multiprocessing import Process, Queue, Pool
+from shlex import quote
 
 import settings
 import abcalc
@@ -29,6 +30,8 @@ class IRC(threading.Thread):
         self.messages_sent = []
         self.commands_received = []
         self.commands_sent = []
+        self.running_instagram = []
+        self.processpool = Pool(processes=1)
 
     def run(self):
         self.connect()
@@ -132,20 +135,20 @@ class IRC(threading.Thread):
         self.send('PRIVMSG', '{user}: {jobid} has been queued.' .format(user=user, jobid=jobid), channel)
         settings.logger.log('SNSCRAPE - Trying to run snscrape with the following arguments - {module} - {target}' \
                             .format(**locals()))
-        sanityregex = re.compile('([\"\'])')
+        sanityregex = re.compile('([\"\'\@\#])')
         if str(module).startswith("twitter"):
             if str(module).startswith("twitter-user"):
                 settings.logger.log('SNSCRAPE - Checking username capitalisation for user ' + sanityregex.sub(r'',target))
                 try:
-                    newtarget = subprocess.check_output("snscrape --max-results 1 twitter-user " + sanityregex.sub(r'',target) + " | grep -Po '^https?://twitter\.com/\K[^/]+'", shell=True).decode("utf-8")
+                    newtarget = subprocess.check_output("snscrape --max-results 1 twitter-user " + quote(sanityregex.sub(r'',target)) + " | grep -Po '^https?://twitter\.com/\K[^/]+'", shell=True).decode("utf-8")
                 except subprocess.CalledProcessError as error:
                     newtarget = None
                 if newtarget is None:
-                    settings.logger.log("SNSCRAPE - Twitter user " + sanityregex.sub(r'',target) + " not found")
+                    settings.logger.log("SNSCRAPE - Twitter user " + quote(sanityregex.sub(r'',target)) + " not found")
                     self.send('PRIVMSG', '{user}: Sorry, No results found for {jobid} - User does not exist' .format(user=user, jobid=jobid), channel)
                 else:
-                    settings.logger.log("SNSCRAPE - Running with updated settings - snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + module + " " + newtarget.strip() + " >jobs/twitter-@" + jobid)
-                    subprocess.run("snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + module + " " + newtarget.strip() + " >jobs/twitter-@" + jobid, shell=True)
+                    settings.logger.log("SNSCRAPE - Running with updated settings - snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + quote(module) + " " + newtarget.strip() + " >jobs/twitter-@" + jobid)
+                    subprocess.run("snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + quote(module) + " " + newtarget.strip() + " >jobs/twitter-@" + jobid, shell=True)
                     settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
                     #Insert the profile as per JAA's request :-)
                     outfile = open("jobs/twitter-@" + jobid, "r")
@@ -161,9 +164,9 @@ class IRC(threading.Thread):
                     uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-@" + jobid + " https://transfer.notkiska.pw/twitter-@" + newtarget, shell=True).decode("utf-8")
 
             if str(module).startswith("twitter-hash"):
-                subprocess.run("snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + module + " " + sanityregex.sub(r'',target) + " >jobs/twitter-#" + jobid, shell=True)
+                subprocess.run("snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + quote(module) + " " + quote(sanityregex.sub(r'',target)) + " >jobs/twitter-#" + jobid, shell=True)
                 settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
-                uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-#" + jobid + " https://transfer.notkiska.pw/twitter-#" + sanityregex.sub(r'',target), shell=True).decode("utf-8")
+                uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-#" + jobid + " https://transfer.notkiska.pw/twitter-#" + quote(sanityregex.sub(r'',target)), shell=True).decode("utf-8")
                 newtarget = sanityregex.sub(r'',target)
 
             if not newtarget is None:
@@ -179,7 +182,7 @@ class IRC(threading.Thread):
         if str(module).startswith("instagram"):
             if str(module).startswith("instagram-user"):
                 settings.logger.log("snscrape --format '{dirtyUrl}'  " + module + " " + sanityregex.sub(r'',target) + " >jobs/instagram-@" + jobid)
-                subprocess.run("snscrape --format '{dirtyUrl}'  " + module + " " + sanityregex.sub(r'',target) + " >jobs/instagram-@" + jobid, shell=True)
+                subprocess.run("snscrape --format '{dirtyUrl}'  " + quote(module) + " " + quote(sanityregex.sub(r'',target)) + " >jobs/instagram-@" + jobid, shell=True)
                 if not os.stat("jobs/instagram-@" + jobid).st_size == 0:
                     settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-@" + sanityregex.sub(r'',target))
                     #Insert the profile as per JAA's request :-)
@@ -191,7 +194,7 @@ class IRC(threading.Thread):
                     outfile=open("jobs/instagram-@" + jobid, "w")
                     outfile.writelines(lines)
                     outfile.close()
-                    uploadedurl = subprocess.check_output("curl -s --upload-file jobs/instagram-@" + jobid + " https://transfer.notkiska.pw/instagram-@" + sanityregex.sub(r'',target), shell=True).decode("utf-8")
+                    uploadedurl = subprocess.check_output("curl -s --upload-file jobs/instagram-@" + jobid + " https://transfer.notkiska.pw/instagram-@" + quote(sanityregex.sub(r'',target)), shell=True).decode("utf-8")
                     archivebotid = abcalc.jobid(uploadedurl)
                     jobfile = "jobs/instagram-@" + jobid
                 else:
@@ -199,10 +202,10 @@ class IRC(threading.Thread):
                     jobfile = "jobs/instagram-@" + jobid
 
             if str(module).startswith("instagram-hashtag"):
-                subprocess.run("snscrape --format '{dirtyUrl}'  " + module + " " + sanityregex.sub(r'',target) + " >jobs/instagram-#" + jobid, shell=True)
+                subprocess.run("snscrape --format '{dirtyUrl}'  " + quote(module) + " " + quote(sanityregex.sub(r'',target)) + " >jobs/instagram-#" + jobid, shell=True)
                 if not os.stat("jobs/instagram-#" + jobid).st_size == 0:
                     settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
-                    uploadedurl = subprocess.check_output("curl -s --upload-file jobs/instagram-#" + jobid + " https://transfer.notkiska.pw/instagram-%23" + sanityregex.sub(r'',target), shell=True).decode("utf-8")
+                    uploadedurl = subprocess.check_output("curl -s --upload-file jobs/instagram-#" + jobid + " https://transfer.notkiska.pw/instagram-%23" + quote(sanityregex.sub(r'',target)), shell=True).decode("utf-8")
                     archivebotid = abcalc.jobid(uploadedurl)
                     uploadedurl = uploadedurl.replace('%40','@')
                     jobfile = "jobs/instagram-#" + jobid
@@ -272,11 +275,13 @@ class IRC(threading.Thread):
                     target = command[2]
                     try:
                         args = command[3]
-                        runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
-                        runsnscrape.start()
+                        runsnscrape = self.processpool.apply_async(self.run_snscrape, args=(channel, user, module, target))
+                        self.running_instagram.append(runsnscrape)
                     except IndexError:
-                        runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
-                        runsnscrape.start()
+#                        runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
+                        runsnscrape = self.processpool.apply_async(self.run_snscrape, args=(channel, user, module, target))
+                        self.running_instagram.append(runsnscrape)
+#                        runsnscrape.start()
                 if function == 'gab':
                     # whatevenisgab?
                     settings.logger.log('gab')

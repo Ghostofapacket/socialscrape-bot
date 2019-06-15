@@ -10515,3 +10515,1402 @@
 [2019-06-12 14:49:45.947465] 20190611.01 - INFO - SNSCRAPE - Finished 62d750689b2d5d2cc58e1da86625ef7db8faf4a3 - Uploading to https://transfer.notkiska.pw/instagram-hashtag-seatow
 [2019-06-12 14:49:48.878216] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!a https://transfer.notkiska.pw/4cmJz/instagram-%23seatow --explain "For Igloo - socialscrape job 62d750689b2d5d2cc58e1da86625ef7db8faf4a3"
 [2019-06-12 14:49:51.879623] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!ignore amyi9d310oatwaxmj23v44t3s ^https?://www\.instagram\.com/.*[?&]hl=
+[2019-06-12 16:03:47.334917] 20190611.01 - INFO - Starting iBot
+[2019-06-12 16:03:47.335140] 20190611.01 - INFO - Connecting to IRC server irc.servercentral.net
+[2019-06-12 16:03:47.457611] 20190611.01 - INFO - IRC - USER socialbot socialbot socialbot :I am a bot; https://github.com/Ghostofapacket/iBot/.
+[2019-06-12 16:03:47.457758] 20190611.01 - INFO - IRC - NICK socialbot
+[2019-06-12 16:03:47.457838] 20190611.01 - INFO - IRC - JOIN #ibot
+[2019-06-12 16:03:47.579424] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Processing connection to irc.servercentral.net
+[2019-06-12 16:03:47.685562] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Looking up your hostname...
+[2019-06-12 16:03:47.685678] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Checking Ident
+[2019-06-12 16:03:47.685726] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Found your hostname
+[2019-06-12 16:03:47.807124] 20190611.01 - INFO - IRC - NOTICE AUTH :*** No Ident response
+[2019-06-12 16:03:47.807794] 20190611.01 - INFO - IRC - :irc.servercentral.net 001 socialbot :Welcome to the EFnet Internet Relay Chat Network socialbot
+[2019-06-12 16:03:47.807860] 20190611.01 - INFO - IRC - :irc.servercentral.net 002 socialbot :Your host is irc.servercentral.net[66.225.225.225/6667], running version ircd-ratbox-3.0.6
+[2019-06-12 16:03:47.807909] 20190611.01 - INFO - IRC - :irc.servercentral.net 003 socialbot :This server was created Sat Feb 6 2010 at 17:58:30 CST
+[2019-06-12 16:03:47.807960] 20190611.01 - INFO - IRC - :irc.servercentral.net 004 socialbot irc.servercentral.net ircd-ratbox-3.0.6 oiwszcrkfydnxbauglZCD biklmnopstveIrS bkloveI
+[2019-06-12 16:03:47.808001] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot CHANTYPES=&# EXCEPTS INVEX CHANMODES=eIb,k,l,imnpstS CHANLIMIT=&#:75 PREFIX=(ov)@+ MAXLIST=beI:100 MODES=4 NETWORK=EFnet KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+[2019-06-12 16:03:47.808046] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot SAFELIST ELIST=U CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=9 CHANNELLEN=50 TOPICLEN=160 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=60 :are supported by this server
+[2019-06-12 16:03:47.808102] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+[2019-06-12 16:03:47.808143] 20190611.01 - INFO - IRC - :irc.servercentral.net 251 socialbot :There are 6124 users and 10308 invisible on 24 servers
+[2019-06-12 16:03:47.808182] 20190611.01 - INFO - IRC - :irc.servercentral.net 252 socialbot 109 :IRC Operators online
+[2019-06-12 16:03:47.808220] 20190611.01 - INFO - IRC - :irc.servercentral.net 254 socialbot 9374 :channels formed
+[2019-06-12 16:03:47.808256] 20190611.01 - INFO - IRC - :irc.servercentral.net 255 socialbot :I have 1104 clients and 2 servers
+[2019-06-12 16:03:47.808299] 20190611.01 - INFO - IRC - :irc.servercentral.net 265 socialbot 1104 3620 :Current local users 1104, max 3620
+[2019-06-12 16:03:47.808337] 20190611.01 - INFO - IRC - :irc.servercentral.net 266 socialbot 16432 21894 :Current global
+[2019-06-12 16:03:47.808413] 20190611.01 - INFO - IRC -  users 16432, max 21894
+[2019-06-12 16:03:47.808451] 20190611.01 - INFO - IRC - :irc.servercentral.net 250 socialbot :Highest connection count: 3622 (3620 clients) (1269665 connections received)
+[2019-06-12 16:03:47.808488] 20190611.01 - INFO - IRC - :irc.servercentral.net 375 socialbot :- irc.servercentral.net Message of the Day -
+[2019-06-12 16:03:47.808525] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                                                _            _
+[2019-06-12 16:03:47.808562] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -             ___ ___ _ ___ _____ _ _ __ ___ _ _| |_ _ _ __ _| |
+[2019-06-12 16:03:47.808598] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            (_-</ -_) '_\ V / -_) '_/ _/ -_) ' \  _| '_/ _` | |
+[2019-06-12 16:03:47.808635] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            /__/\___|_|  \_/\___|_| \__\___|_||_\__|_| \__,_|_|
+[2019-06-12 16:03:47.808671] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:03:47.808707] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -          o Listening on ports: 6660 - 6669, 7000, 8080, 31337 o
+[2019-06-12 16:03:47.808743] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                   o Listening on SSL ports: 9999 o
+[2019-06-12 16:03:47.808779] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -               o Visit us @ http://www.servercentral.com o
+[2019-06-12 16:03:47.808815] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:03:47.808851] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Rules ----------------------------------------------
+[2019-06-12 16:03:47.808886] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:03:47.808922] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Flooding                         o No DoS bots
+[2019-06-12 16:03:47.808958] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Clones                           o No Spamming
+[2019-06-12 16:03:47.808994] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Takeovers                        o No Whiners
+[2019-06-12 16:03:47.809034] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:03:47.809071] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Staff ----------------------------------------------
+[2019-06-12 16:03:47.809106] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:03:47.809142] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     o Local IRCops may be summoned with the command:  /stats p
+[2019-06-12 16:03:47.809177] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:03:47.809213] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Disclaimer ------------------------------------------------
+[2019-06-12 16:03:47.809248] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:03:47.809284] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     This server, its staff and the people hosting it are *NOT*
+[2019-06-12 16:03:47.809320] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     responsible for the content that passes through this server.
+[2019-06-12 16:03:47.809356] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     Use of this server is a *privilege* which may be removed at
+[2019-06-12 16:03:47.809391] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     any time and for any reason by the friendly server operators.
+[2019-06-12 16:03:47.809427] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:03:47.809463] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- End of MOTD -----------------------------------------------
+[2019-06-12 16:03:47.809499] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:03:47.809534] 20190611.01 - INFO - IRC - :irc.servercentral.net 376 socialbot :End of /MOTD command.
+[2019-06-12 16:03:47.809570] 20190611.01 - INFO - IRC - :socialbot!~socialbot@static.29.35.217.95.clients.your-server.de JOIN :#ibot
+[2019-06-12 16:03:47.809605] 20190611.01 - INFO - IRC - :irc.servercentral.net 353 socialbot = #ibot :socialbot
+[2019-06-12 16:03:47.929540] 20190611.01 - INFO - IRC -  @Igloo
+[2019-06-12 16:03:47.929647] 20190611.01 - INFO - IRC - :irc.servercentral.net 366 socialbot #ibot :End of /NAMES list.
+[2019-06-12 16:03:47.929696] 20190611.01 - INFO - IRC - :DM!irc@services.servercentral.net PRIVMSG socialbot :VERSION
+[2019-06-12 16:04:05.317378] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape twitter-user Ghostofapacket2
+[2019-06-12 16:04:05.320361] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:04:05.320942] 20190611.01 - INFO - SNSCRAPE - Job ID 53b489d15633c41fdc02d19d0b786614e53d2ce5
+[2019-06-12 16:04:05.321052] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: 53b489d15633c41fdc02d19d0b786614e53d2ce5 has been queued.
+[2019-06-12 16:04:05.321152] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - twitter-user - Ghostofapacket2
+[2019-06-12 16:04:05.321490] 20190611.01 - INFO - SNSCRAPE - Checking username capitalisation for user Ghostofapacket2
+[2019-06-12 16:04:05.322890] 20190611.01 - INFO - SNSCRAPE - Twitter user Ghostofapacket2 not found
+[2019-06-12 16:04:05.323016] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: Sorry, No results found for 53b489d15633c41fdc02d19d0b786614e53d2ce5 - User does not exist
+[2019-06-12 16:04:12.206009] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape twitter-user Ghostofapacket
+[2019-06-12 16:04:12.207337] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:04:12.207904] 20190611.01 - INFO - SNSCRAPE - Job ID 96068f40281f861ba97d8a6ddfb3b4dc6490d9e0
+[2019-06-12 16:04:12.208023] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: 96068f40281f861ba97d8a6ddfb3b4dc6490d9e0 has been queued.
+[2019-06-12 16:04:12.208101] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - twitter-user - Ghostofapacket
+[2019-06-12 16:04:12.208391] 20190611.01 - INFO - SNSCRAPE - Checking username capitalisation for user Ghostofapacket
+[2019-06-12 16:04:12.209790] 20190611.01 - INFO - SNSCRAPE - Twitter user Ghostofapacket not found
+[2019-06-12 16:04:12.209917] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: Sorry, No results found for 96068f40281f861ba97d8a6ddfb3b4dc6490d9e0 - User does not exist
+[2019-06-12 16:05:44.862941] 20190611.01 - INFO - Starting iBot
+[2019-06-12 16:05:44.863171] 20190611.01 - INFO - Connecting to IRC server irc.servercentral.net
+[2019-06-12 16:05:44.987724] 20190611.01 - INFO - IRC - USER socialbot socialbot socialbot :I am a bot; https://github.com/Ghostofapacket/iBot/.
+[2019-06-12 16:05:44.987844] 20190611.01 - INFO - IRC - NICK socialbot
+[2019-06-12 16:05:44.987908] 20190611.01 - INFO - IRC - JOIN #ibot
+[2019-06-12 16:05:45.111609] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Processing connection to irc.servercentral.net
+[2019-06-12 16:05:45.213937] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Looking up your hostname...
+[2019-06-12 16:05:45.214077] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Checking Ident
+[2019-06-12 16:05:45.214134] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Found your hostname
+[2019-06-12 16:05:45.337730] 20190611.01 - INFO - IRC - NOTICE AUTH :*** No Ident response
+[2019-06-12 16:05:45.338355] 20190611.01 - INFO - IRC - :irc.servercentral.net 001 socialbot :Welcome to the EFnet Internet Relay Chat Network socialbot
+[2019-06-12 16:05:45.338422] 20190611.01 - INFO - IRC - :irc.servercentral.net 002 socialbot :Your host is irc.servercentral.net[66.225.225.225/6667], running version ircd-ratbox-3.0.6
+[2019-06-12 16:05:45.338470] 20190611.01 - INFO - IRC - :irc.servercentral.net 003 socialbot :This server was created Sat Feb 6 2010 at 17:58:30 CST
+[2019-06-12 16:05:45.338527] 20190611.01 - INFO - IRC - :irc.servercentral.net 004 socialbot irc.servercentral.net ircd-ratbox-3.0.6 oiwszcrkfydnxbauglZCD biklmnopstveIrS bkloveI
+[2019-06-12 16:05:45.338585] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot CHANTYPES=&# EXCEPTS INVEX CHANMODES=eIb,k,l,imnpstS CHANLIMIT=&#:75 PREFIX=(ov)@+ MAXLIST=beI:100 MODES=4 NETWORK=EFnet KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+[2019-06-12 16:05:45.338629] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot SAFELIST ELIST=U CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=9 CHANNELLEN=50 TOPICLEN=160 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=60 :are supported by this server
+[2019-06-12 16:05:45.338678] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+[2019-06-12 16:05:45.338720] 20190611.01 - INFO - IRC - :irc.servercentral.net 251 socialbot :There are 6129 users and 10310 invisible on 24 servers
+[2019-06-12 16:05:45.338753] 20190611.01 - INFO - IRC - :irc.servercentral.net 252 socialbot 109 :IRC Operators online
+[2019-06-12 16:05:45.338794] 20190611.01 - INFO - IRC - :irc.servercentral.net 253 socialbot 1 :unknown connection(s)
+[2019-06-12 16:05:45.338829] 20190611.01 - INFO - IRC - :irc.servercentral.net 254 socialbot 9377 :channels formed
+[2019-06-12 16:05:45.338860] 20190611.01 - INFO - IRC - :irc.servercentral.net 255 socialbot :I have 1105 clients and 2 servers
+[2019-06-12 16:05:45.338900] 20190611.01 - INFO - IRC - :irc.servercentral.net 265 socialbot 1105 3620 :Current local users 1105, max 3620
+[2019-06-12 16:05:45.338935] 20190611.01 - INFO - IRC - :irc.servercentral.net 266 socialbot 16439 21894 :Current global users 16439, max 21894
+[2019-06-12 16:05:45.338966] 20190611.01 - INFO - IRC - :irc.servercentral.net 250 socialbot :Highest connection count: 3622 (3620 clients) (1269668 connections received)
+[2019-06-12 16:05:45.338996] 20190611.01 - INFO - IRC - :irc.servercentral.net 375 socialbot :- irc.servercentral.net Message of the Day -
+[2019-06-12 16:05:45.339035] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                                                _            _
+[2019-06-12 16:05:45.339081] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -             ___ ___ _ ___ _____ _ _ __ ___ _ _| |_ _ _ __ _| |
+[2019-06-12 16:05:45.339134] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            (_-</ -_) '_\ V / -_) '_/ _/ -_) ' \  _| '_/ _` | |
+[2019-06-12 16:05:45.339181] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            /__/\___|_|  \_/\___|_| \__\___|_||_\__|_| \__,_|_|
+[2019-06-12 16:05:45.339232] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:05:45.339276] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -          o Listening on ports: 6660 - 6669, 7000, 8080, 31337 o
+[2019-06-12 16:05:45.339308] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                   o Listening on SSL ports: 9999 o
+[2019-06-12 16:05:45.339362] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -               o Visit us @ http://www.servercentral.com o
+[2019-06-12 16:05:45.339410] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:05:45.339455] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Rules ----------------------------------------------
+[2019-06-12 16:05:45.339500] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:05:45.339552] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Flooding                         o No DoS bots
+[2019-06-12 16:05:45.339610] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No
+[2019-06-12 16:05:45.339763] 20190611.01 - INFO - IRC -  Clones                           o No Spamming
+[2019-06-12 16:05:45.339821] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Takeovers                        o No Whiners
+[2019-06-12 16:05:45.339878] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:05:45.339934] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Staff ----------------------------------------------
+[2019-06-12 16:05:45.339987] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:05:45.340040] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     o Local IRCops may be summoned with the command:  /stats p
+[2019-06-12 16:05:45.340130] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:05:45.340194] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Disclaimer ------------------------------------------------
+[2019-06-12 16:05:45.340239] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:05:45.340298] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     This server, its staff and the people hosting it are *NOT*
+[2019-06-12 16:05:45.340366] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     responsible for the content that passes through this server.
+[2019-06-12 16:05:45.340410] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     Use of this server is a *privilege* which may be removed at
+[2019-06-12 16:05:45.340474] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     any time and for any reason by the friendly server operators.
+[2019-06-12 16:05:45.340517] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:05:45.340571] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- End of MOTD -----------------------------------------------
+[2019-06-12 16:05:45.340614] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:05:45.340684] 20190611.01 - INFO - IRC - :irc.servercentral.net 376 socialbot :End of /MOTD command.
+[2019-06-12 16:05:45.340766] 20190611.01 - INFO - IRC - :socialbot!~socialbot@static.29.35.217.95.clients.your-server.de JOIN
+[2019-06-12 16:05:45.503428] 20190611.01 - INFO - IRC - :#ibot
+[2019-06-12 16:05:45.503543] 20190611.01 - INFO - IRC - :irc.servercentral.net 353 socialbot = #ibot :socialbot @Igloo
+[2019-06-12 16:05:45.503602] 20190611.01 - INFO - IRC - :irc.servercentral.net 366 socialbot #ibot :End of /NAMES list.
+[2019-06-12 16:05:45.503650] 20190611.01 - INFO - IRC - :DM!irc@services.servercentral.net PRIVMSG socialbot :VERSION
+[2019-06-12 16:05:48.986592] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape twitter-user Ghostofapacket
+[2019-06-12 16:05:48.990780] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:05:48.991414] 20190611.01 - INFO - SNSCRAPE - Job ID 68dfa3dd734ec806c4b65611ab4af9466dfc9f0f
+[2019-06-12 16:05:48.991556] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: 68dfa3dd734ec806c4b65611ab4af9466dfc9f0f has been queued.
+[2019-06-12 16:05:48.991667] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - twitter-user - Ghostofapacket
+[2019-06-12 16:05:48.992040] 20190611.01 - INFO - SNSCRAPE - Checking username capitalisation for user Ghostofapacket
+[2019-06-12 16:05:48.993796] 20190611.01 - INFO - SNSCRAPE - Twitter user Ghostofapacket not found
+[2019-06-12 16:05:48.993962] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: Sorry, No results found for 68dfa3dd734ec806c4b65611ab4af9466dfc9f0f - User does not exist
+[2019-06-12 16:06:27.575833] 20190611.01 - INFO - Starting iBot
+[2019-06-12 16:06:27.576060] 20190611.01 - INFO - Connecting to IRC server irc.servercentral.net
+[2019-06-12 16:06:27.699862] 20190611.01 - INFO - IRC - USER socialbot socialbot socialbot :I am a bot; https://github.com/Ghostofapacket/iBot/.
+[2019-06-12 16:06:27.699990] 20190611.01 - INFO - IRC - NICK socialbot
+[2019-06-12 16:06:27.700068] 20190611.01 - INFO - IRC - JOIN #ibot
+[2019-06-12 16:06:27.823097] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Processing connection to irc.servercentral.net
+[2019-06-12 16:06:27.929356] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Looking up your hostname...
+[2019-06-12 16:06:27.929485] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Checking Ident
+[2019-06-12 16:06:27.929536] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Found your hostname
+[2019-06-12 16:06:28.052515] 20190611.01 - INFO - IRC - NOTICE AUTH :*** No Ident response
+[2019-06-12 16:06:28.055931] 20190611.01 - INFO - IRC - :irc.servercentral.net 001 socialbot :Welcome to the EFnet Internet Relay Chat Network socialbot
+[2019-06-12 16:06:28.056001] 20190611.01 - INFO - IRC - :irc.servercentral.net 002 socialbot :Your host is irc.servercentral.net[66.225.225.225/6667], running version ircd-ratbox-3.0.6
+[2019-06-12 16:06:28.056038] 20190611.01 - INFO - IRC - :irc.servercentral.net 003 socialbot :This server was created Sat Feb 6 2010 at 17:58:30 CST
+[2019-06-12 16:06:28.056068] 20190611.01 - INFO - IRC - :irc.servercentral.net 004 socialbot irc.servercentral.net ircd-ratbox-3.0.6 oiwszcrkfydnxbauglZCD biklmnopstveIrS bkloveI
+[2019-06-12 16:06:28.056097] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot CHANTYPES=&# EXCEPTS INVEX CHANMODES=eIb,k,l,imnpstS CHANLIMIT=&#:75 PREFIX=(ov)@+ MAXLIST=beI:100 MODES=4 NETWORK=EFnet KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+[2019-06-12 16:06:28.056129] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot SAFELIST ELIST=U CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=9 CHANNELLEN=50 TOPICLEN=160 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=60 :are supported by this server
+[2019-06-12 16:06:28.056157] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+[2019-06-12 16:06:28.056184] 20190611.01 - INFO - IRC - :irc.servercentral.net 251 socialbot :There are 6131 users and 10310 invisible on 24 servers
+[2019-06-12 16:06:28.056215] 20190611.01 - INFO - IRC - :irc.servercentral.net 252 socialbot 109 :IRC Operators online
+[2019-06-12 16:06:28.056242] 20190611.01 - INFO - IRC - :irc.servercentral.net 253 socialbot 2 :unknown connection(s)
+[2019-06-12 16:06:28.056267] 20190611.01 - INFO - IRC - :irc.servercentral.net 254 socialbot 9378 :channels formed
+[2019-06-12 16:06:28.056293] 20190611.01 - INFO - IRC - :irc.servercentral.net 255 socialbot :I have 1105 clients and 2 servers
+[2019-06-12 16:06:28.056318] 20190611.01 - INFO - IRC - :irc.servercentral.net 265 socialbot 1105 3620 :Current local users 1105, max 3620
+[2019-06-12 16:06:28.056344] 20190611.01 - INFO - IRC - :irc.servercentral.net 266 socialbot 16441 21894 :Current global users 16441, max 21894
+[2019-06-12 16:06:28.056369] 20190611.01 - INFO - IRC - :irc.servercentral.net 250 socialbot :Highest connection count: 3622 (3620 clients) (1269669 connections received)
+[2019-06-12 16:06:28.056395] 20190611.01 - INFO - IRC - :irc.servercentral.net 375 socialbot :- irc.servercentral.net Message of the Day -
+[2019-06-12 16:06:28.056421] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                                                _            _
+[2019-06-12 16:06:28.056447] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -             ___ ___ _ ___ _____ _ _ __ ___ _ _| |_ _ _ __ _| |
+[2019-06-12 16:06:28.056472] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            (_-</ -_) '_\ V / -_) '_/ _/ -_) ' \  _| '_/ _` | |
+[2019-06-12 16:06:28.056498] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            /__/\___|_|  \_/\___|_| \__\___|_||_\__|_| \__,_|_|
+[2019-06-12 16:06:28.056523] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:06:28.056549] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -          o Listening on ports: 6660 - 6669, 7000, 8080, 31337 o
+[2019-06-12 16:06:28.056575] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                   o Listening on SSL ports: 9999 o
+[2019-06-12 16:06:28.056601] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -               o Visit us @ http://www.servercentral.com o
+[2019-06-12 16:06:28.056626] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:06:28.056651] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Rules ----------------------------------------------
+[2019-06-12 16:06:28.056677] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:06:28.056702] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Flooding                         o No DoS bots
+[2019-06-12 16:06:28.056727] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No
+[2019-06-12 16:06:28.056797] 20190611.01 - INFO - IRC -  Clones                           o No Spamming
+[2019-06-12 16:06:28.056827] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Takeovers                        o No Whiners
+[2019-06-12 16:06:28.056854] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:06:28.056881] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Staff ----------------------------------------------
+[2019-06-12 16:06:28.056907] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:06:28.056933] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     o Local IRCops may be summoned with the command:  /stats p
+[2019-06-12 16:06:28.056959] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:06:28.056985] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Disclaimer ------------------------------------------------
+[2019-06-12 16:06:28.057014] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:06:28.057041] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     This server, its staff and the people hosting it are *NOT*
+[2019-06-12 16:06:28.057067] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     responsible for the content that passes through this server.
+[2019-06-12 16:06:28.057093] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     Use of this server is a *privilege* which may be removed at
+[2019-06-12 16:06:28.057119] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     any time and for any reason by the friendly server operators.
+[2019-06-12 16:06:28.057145] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:06:28.057171] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- End of MOTD -----------------------------------------------
+[2019-06-12 16:06:28.057197] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:06:28.057222] 20190611.01 - INFO - IRC - :irc.servercentral.net 376 socialbot :End of /MOTD command.
+[2019-06-12 16:06:28.057248] 20190611.01 - INFO - IRC - :socialbot!~socialbot@static.29.35.217.95.clients.your-server.de JOIN
+[2019-06-12 16:06:28.222764] 20190611.01 - INFO - IRC - :#ibot
+[2019-06-12 16:06:28.222859] 20190611.01 - INFO - IRC - :irc.servercentral.net 353 socialbot = #ibot :socialbot @Igloo
+[2019-06-12 16:06:28.222912] 20190611.01 - INFO - IRC - :irc.servercentral.net 366 socialbot #ibot :End of /NAMES list.
+[2019-06-12 16:06:28.222965] 20190611.01 - INFO - IRC - :DM!irc@services.servercentral.net PRIVMSG socialbot :VERSION
+[2019-06-12 16:06:30.598100] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape twitter-user Ghostofapacket
+[2019-06-12 16:06:30.601132] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:06:30.601719] 20190611.01 - INFO - SNSCRAPE - Job ID cca59c561f0efd11427ad759289f27ec73854dcd
+[2019-06-12 16:06:30.601827] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: cca59c561f0efd11427ad759289f27ec73854dcd has been queued.
+[2019-06-12 16:06:30.601888] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - twitter-user - Ghostofapacket
+[2019-06-12 16:06:30.602179] 20190611.01 - INFO - SNSCRAPE - Checking username capitalisation for user Ghostofapacket
+[2019-06-12 16:06:30.603770] 20190611.01 - INFO - SNSCRAPE - Twitter user Ghostofapacket not found
+[2019-06-12 16:06:30.603892] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: Sorry, No results found for cca59c561f0efd11427ad759289f27ec73854dcd - User does not exist
+[2019-06-12 16:08:37.134272] 20190611.01 - INFO - Starting iBot
+[2019-06-12 16:08:37.134480] 20190611.01 - INFO - Connecting to IRC server irc.servercentral.net
+[2019-06-12 16:08:37.255203] 20190611.01 - INFO - IRC - USER socialbot socialbot socialbot :I am a bot; https://github.com/Ghostofapacket/iBot/.
+[2019-06-12 16:08:37.255343] 20190611.01 - INFO - IRC - NICK socialbot
+[2019-06-12 16:08:37.255397] 20190611.01 - INFO - IRC - JOIN #ibot
+[2019-06-12 16:08:37.375310] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Processing connection to irc.servercentral.net
+[2019-06-12 16:08:37.478231] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Looking up your hostname...
+[2019-06-12 16:08:37.478331] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Checking Ident
+[2019-06-12 16:08:37.478372] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Found your hostname
+[2019-06-12 16:08:37.598200] 20190611.01 - INFO - IRC - NOTICE AUTH :*** No Ident response
+[2019-06-12 16:08:37.601500] 20190611.01 - INFO - IRC - :irc.servercentral.net 001 socialbot :Welcome to the EFnet Internet Relay Chat Network socialbot
+[2019-06-12 16:08:37.601593] 20190611.01 - INFO - IRC - :irc.servercentral.net 002 socialbot :Your host is irc.servercentral.net[66.225.225.225/6667], running version ircd-ratbox-3.0.6
+[2019-06-12 16:08:37.601654] 20190611.01 - INFO - IRC - :irc.servercentral.net 003 socialbot :This server was created Sat Feb 6 2010 at 17:58:30 CST
+[2019-06-12 16:08:37.601714] 20190611.01 - INFO - IRC - :irc.servercentral.net 004 socialbot irc.servercentral.net ircd-ratbox-3.0.6 oiwszcrkfydnxbauglZCD biklmnopstveIrS bkloveI
+[2019-06-12 16:08:37.601758] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot CHANTYPES=&# EXCEPTS INVEX CHANMODES=eIb,k,l,imnpstS CHANLIMIT=&#:75 PREFIX=(ov)@+ MAXLIST=beI:100 MODES=4 NETWORK=EFnet KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+[2019-06-12 16:08:37.601804] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot SAFELIST ELIST=U CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=9 CHANNELLEN=50 TOPICLEN=160 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=60 :are supported by this server
+[2019-06-12 16:08:37.601847] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+[2019-06-12 16:08:37.601890] 20190611.01 - INFO - IRC - :irc.servercentral.net 251 socialbot :There are 6129 users and 10314 invisible on 24 servers
+[2019-06-12 16:08:37.601932] 20190611.01 - INFO - IRC - :irc.servercentral.net 252 socialbot 109 :IRC Operators online
+[2019-06-12 16:08:37.601970] 20190611.01 - INFO - IRC - :irc.servercentral.net 253 socialbot 1 :unknown connection(s)
+[2019-06-12 16:08:37.602010] 20190611.01 - INFO - IRC - :irc.servercentral.net 254 socialbot 9378 :channels formed
+[2019-06-12 16:08:37.602050] 20190611.01 - INFO - IRC - :irc.servercentral.net 255 socialbot :I have 1107 clients and 2 servers
+[2019-06-12 16:08:37.602091] 20190611.01 - INFO - IRC - :irc.servercentral.net 265 socialbot 1107 3620 :Current local users 1107, max 3620
+[2019-06-12 16:08:37.602135] 20190611.01 - INFO - IRC - :irc.servercentral.net 266 socialbot 16443 21894 :Current global users 16443, max 21894
+[2019-06-12 16:08:37.602345] 20190611.01 - INFO - IRC - :irc.servercentral.net 250 socialbot :Highest connection count: 3622 (3620 clients) (1269673 connections received)
+[2019-06-12 16:08:37.602383] 20190611.01 - INFO - IRC - :irc.servercentral.net 375 socialbot :- irc.servercentral.net Message of the Day -
+[2019-06-12 16:08:37.602419] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                                                _            _
+[2019-06-12 16:08:37.602455] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -             ___ ___ _ ___ _____ _ _ __ ___ _ _| |_ _ _ __ _| |
+[2019-06-12 16:08:37.602491] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            (_-</ -_) '_\ V / -_) '_/ _/ -_) ' \  _| '_/ _` | |
+[2019-06-12 16:08:37.602526] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            /__/\___|_|  \_/\___|_| \__\___|_||_\__|_| \__,_|_|
+[2019-06-12 16:08:37.602563] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:08:37.602607] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -          o Listening on ports: 6660 - 6669, 7000, 8080, 31337 o
+[2019-06-12 16:08:37.602646] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                   o Listening on SSL ports: 9999 o
+[2019-06-12 16:08:37.602687] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -               o Visit us @ http://www.servercentral.com o
+[2019-06-12 16:08:37.602728] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:08:37.602765] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Rules ----------------------------------------------
+[2019-06-12 16:08:37.602807] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:08:37.602847] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Flooding                         o No DoS bots
+[2019-06-12 16:08:37.602886] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No
+[2019-06-12 16:08:37.603007] 20190611.01 - INFO - IRC -  Clones                           o No Spamming
+[2019-06-12 16:08:37.603047] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Takeovers                        o No Whiners
+[2019-06-12 16:08:37.603088] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:08:37.603127] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Staff ----------------------------------------------
+[2019-06-12 16:08:37.603172] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:08:37.603214] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     o Local IRCops may be summoned with the command:  /stats p
+[2019-06-12 16:08:37.603416] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:08:37.603460] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Disclaimer ------------------------------------------------
+[2019-06-12 16:08:37.603547] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:08:37.603606] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     This server, its staff and the people hosting it are *NOT*
+[2019-06-12 16:08:37.603651] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     responsible for the content that passes through this server.
+[2019-06-12 16:08:37.603695] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     Use of this server is a *privilege* which may be removed at
+[2019-06-12 16:08:37.603735] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     any time and for any reason by the friendly server operators.
+[2019-06-12 16:08:37.603778] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:08:37.603874] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- End of MOTD -----------------------------------------------
+[2019-06-12 16:08:37.603919] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:08:37.603959] 20190611.01 - INFO - IRC - :irc.servercentral.net 376 socialbot :End of /MOTD command.
+[2019-06-12 16:08:37.603999] 20190611.01 - INFO - IRC - :socialbot!~socialbot@static.29.35.217.95.clients.your-server.de JOIN
+[2019-06-12 16:08:37.763644] 20190611.01 - INFO - IRC - :#ibot
+[2019-06-12 16:08:37.763757] 20190611.01 - INFO - IRC - :irc.servercentral.net 353 socialbot = #ibot :socialbot @Igloo
+[2019-06-12 16:08:37.763809] 20190611.01 - INFO - IRC - :irc.servercentral.net 366 socialbot #ibot :End of /NAMES list.
+[2019-06-12 16:08:37.763868] 20190611.01 - INFO - IRC - :DM!irc@services.servercentral.net PRIVMSG socialbot :VERSION
+[2019-06-12 16:08:40.251464] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape twitter-user Ghostofapacket
+[2019-06-12 16:08:40.255690] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:08:40.256412] 20190611.01 - INFO - SNSCRAPE - Job ID dfdede4d298486e6184fa52a55ea5943c9521f44
+[2019-06-12 16:08:40.256531] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: dfdede4d298486e6184fa52a55ea5943c9521f44 has been queued.
+[2019-06-12 16:08:40.256610] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - twitter-user - Ghostofapacket
+[2019-06-12 16:08:40.256901] 20190611.01 - INFO - SNSCRAPE - Checking username capitalisation for user Ghostofapacket
+[2019-06-12 16:08:41.439309] 20190611.01 - INFO - SNSCRAPE - Running with updated settings - snscrape --format '{url} {tcooutlinksss} {outlinksss}'  twitter-user Ghostofapacket >jobs/twitter-@dfdede4d298486e6184fa52a55ea5943c9521f44
+[2019-06-12 16:08:47.733452] 20190611.01 - INFO - SNSCRAPE - Finished dfdede4d298486e6184fa52a55ea5943c9521f44 - Uploading to https://transfer.notkiska.pw/twitter-user-Ghostofapacket
+[2019-06-12 16:08:49.996585] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!ao < https://transfer.notkiska.pw/Q07VA/twitter-@Ghostofapacket --explain "For Igloo - socialscrape job dfdede4d298486e6184fa52a55ea5943c9521f44" --concurrency 6 --delay 0
+[2019-06-12 16:13:29.048777] 20190611.01 - INFO - Starting iBot
+[2019-06-12 16:13:29.049012] 20190611.01 - INFO - Connecting to IRC server irc.servercentral.net
+[2019-06-12 16:13:29.171418] 20190611.01 - INFO - IRC - USER socialbot socialbot socialbot :I am a bot; https://github.com/Ghostofapacket/iBot/.
+[2019-06-12 16:13:29.171551] 20190611.01 - INFO - IRC - NICK socialbot
+[2019-06-12 16:13:29.171621] 20190611.01 - INFO - IRC - JOIN #ibot
+[2019-06-12 16:13:29.293097] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Processing connection to irc.servercentral.net
+[2019-06-12 16:13:29.399090] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Looking up your hostname...
+[2019-06-12 16:13:29.399218] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Checking Ident
+[2019-06-12 16:13:29.399259] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Found your hostname
+[2019-06-12 16:13:29.520711] 20190611.01 - INFO - IRC - NOTICE AUTH :*** No Ident response
+[2019-06-12 16:13:29.521315] 20190611.01 - INFO - IRC - :irc.servercentral.net 001 socialbot :Welcome to the EFnet Internet Relay Chat Network socialbot
+[2019-06-12 16:13:29.521394] 20190611.01 - INFO - IRC - :irc.servercentral.net 002 socialbot :Your host is irc.servercentral.net[66.225.225.225/6667], running version ircd-ratbox-3.0.6
+[2019-06-12 16:13:29.521443] 20190611.01 - INFO - IRC - :irc.servercentral.net 003 socialbot :This server was created Sat Feb 6 2010 at 17:58:30 CST
+[2019-06-12 16:13:29.521482] 20190611.01 - INFO - IRC - :irc.servercentral.net 004 socialbot irc.servercentral.net ircd-ratbox-3.0.6 oiwszcrkfydnxbauglZCD biklmnopstveIrS bkloveI
+[2019-06-12 16:13:29.521512] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot CHANTYPES=&# EXCEPTS INVEX CHANMODES=eIb,k,l,imnpstS CHANLIMIT=&#:75 PREFIX=(ov)@+ MAXLIST=beI:100 MODES=4 NETWORK=EFnet KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+[2019-06-12 16:13:29.521549] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot SAFELIST ELIST=U CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=9 CHANNELLEN=50 TOPICLEN=160 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=60 :are supported by this server
+[2019-06-12 16:13:29.521578] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+[2019-06-12 16:13:29.521610] 20190611.01 - INFO - IRC - :irc.servercentral.net 251 socialbot :There are 6133 users and 10312 invisible on 24 servers
+[2019-06-12 16:13:29.521647] 20190611.01 - INFO - IRC - :irc.servercentral.net 252 socialbot 109 :IRC Operators online
+[2019-06-12 16:13:29.521676] 20190611.01 - INFO - IRC - :irc.servercentral.net 253 socialbot 1 :unknown connection(s)
+[2019-06-12 16:13:29.521708] 20190611.01 - INFO - IRC - :irc.servercentral.net 254 socialbot 9381 :channels formed
+[2019-06-12 16:13:29.521735] 20190611.01 - INFO - IRC - :irc.servercentral.net 255 socialbot :I have 1109 clients and 2 servers
+[2019-06-12 16:13:29.521770] 20190611.01 - INFO - IRC - :irc.servercentral.net 265 socialbot 1109 3620 :Current local users 1109, max 3620
+[2019-06-12 16:13:29.521803] 20190611.01 - INFO - IRC - :
+[2019-06-12 16:13:29.521864] 20190611.01 - INFO - IRC - irc.servercentral.net 266 socialbot 16445 21894 :Current global users 16445, max 21894
+[2019-06-12 16:13:29.521898] 20190611.01 - INFO - IRC - :irc.servercentral.net 250 socialbot :Highest connection count: 3622 (3620 clients) (1269679 connections received)
+[2019-06-12 16:13:29.521926] 20190611.01 - INFO - IRC - :irc.servercentral.net 375 socialbot :- irc.servercentral.net Message of the Day -
+[2019-06-12 16:13:29.521953] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                                                _            _
+[2019-06-12 16:13:29.521983] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -             ___ ___ _ ___ _____ _ _ __ ___ _ _| |_ _ _ __ _| |
+[2019-06-12 16:13:29.522017] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            (_-</ -_) '_\ V / -_) '_/ _/ -_) ' \  _| '_/ _` | |
+[2019-06-12 16:13:29.522044] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            /__/\___|_|  \_/\___|_| \__\___|_||_\__|_| \__,_|_|
+[2019-06-12 16:13:29.522070] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:13:29.522097] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -          o Listening on ports: 6660 - 6669, 7000, 8080, 31337 o
+[2019-06-12 16:13:29.522123] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                   o Listening on SSL ports: 9999 o
+[2019-06-12 16:13:29.522149] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -               o Visit us @ http://www.servercentral.com o
+[2019-06-12 16:13:29.522175] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:13:29.522202] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Rules ----------------------------------------------
+[2019-06-12 16:13:29.522228] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:13:29.522254] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Flooding                         o No DoS bots
+[2019-06-12 16:13:29.522280] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Clones                           o No Spamming
+[2019-06-12 16:13:29.522306] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Takeovers                        o No Whiners
+[2019-06-12 16:13:29.522333] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:13:29.522359] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Staff ----------------------------------------------
+[2019-06-12 16:13:29.522384] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:13:29.522410] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     o Local IRCops may be summoned with the command:  /stats p
+[2019-06-12 16:13:29.522436] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:13:29.522462] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Disclaimer ------------------------------------------------
+[2019-06-12 16:13:29.522488] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:13:29.522513] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     This server, its staff and the people hosting it are *NOT*
+[2019-06-12 16:13:29.522540] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     responsible for the content that passes through this server.
+[2019-06-12 16:13:29.522566] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     Use of this server is a *privilege* which may be removed at
+[2019-06-12 16:13:29.522592] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     any time and for any reason by the friendly server operators.
+[2019-06-12 16:13:29.522618] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:13:29.522644] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- End of MOTD -----------------------------------------------
+[2019-06-12 16:13:29.522670] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:13:29.522696] 20190611.01 - INFO - IRC - :irc.servercentral.net 376 socialbot :End of /MOTD command.
+[2019-06-12 16:13:29.522722] 20190611.01 - INFO - IRC - :socialbot!~socialbot@static.29.35.217.95.clients.your-server.de JOIN
+[2019-06-12 16:13:29.642974] 20190611.01 - INFO - IRC - :#ibot
+[2019-06-12 16:13:29.643099] 20190611.01 - INFO - IRC - :irc.servercentral.net 353 socialbot = #ibot :socialbot @Igloo
+[2019-06-12 16:13:29.643170] 20190611.01 - INFO - IRC - :irc.servercentral.net 366 socialbot #ibot :End of /NAMES list.
+[2019-06-12 16:13:29.643223] 20190611.01 - INFO - IRC - :DM!irc@services.servercentral.net PRIVMSG socialbot :VERSION
+[2019-06-12 16:13:34.206456] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape twitter-user Ghostofapacket
+[2019-06-12 16:13:34.209299] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:13:34.209861] 20190611.01 - INFO - SNSCRAPE - Job ID 530d8be5d9820b3e84668e03e1dc8c7a4f385c59
+[2019-06-12 16:13:34.209970] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: 530d8be5d9820b3e84668e03e1dc8c7a4f385c59 has been queued.
+[2019-06-12 16:13:34.210041] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - twitter-user - Ghostofapacket
+[2019-06-12 16:13:34.210317] 20190611.01 - INFO - SNSCRAPE - Checking username capitalisation for user Ghostofapacket
+[2019-06-12 16:13:35.223402] 20190611.01 - INFO - SNSCRAPE - Running with updated settings - snscrape --format '{url} {tcooutlinksss} {outlinksss}'  twitter-user Ghostofapacket >jobs/twitter-@530d8be5d9820b3e84668e03e1dc8c7a4f385c59
+[2019-06-12 16:13:37.277501] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape twitter-user Ghostofapacket2
+[2019-06-12 16:13:37.278739] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:13:37.279513] 20190611.01 - INFO - SNSCRAPE - Job ID dfb619476f203517a499bb797d30ed9586505ef2
+[2019-06-12 16:13:37.279670] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: dfb619476f203517a499bb797d30ed9586505ef2 has been queued.
+[2019-06-12 16:13:37.279754] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - twitter-user - Ghostofapacket2
+[2019-06-12 16:13:37.280159] 20190611.01 - INFO - SNSCRAPE - Checking username capitalisation for user Ghostofapacket2
+[2019-06-12 16:13:38.169882] 20190611.01 - INFO - SNSCRAPE - Twitter user Ghostofapacket2 not found
+[2019-06-12 16:13:38.170024] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: Sorry, No results found for dfb619476f203517a499bb797d30ed9586505ef2 - User does not exist
+[2019-06-12 16:13:41.267460] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape twitter-user Ghostofapacket
+[2019-06-12 16:13:41.268722] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:13:41.269299] 20190611.01 - INFO - SNSCRAPE - Job ID dfeea1dd93833513610a3aa8dcbb27daca55fed8
+[2019-06-12 16:13:41.269412] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: dfeea1dd93833513610a3aa8dcbb27daca55fed8 has been queued.
+[2019-06-12 16:13:41.269476] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - twitter-user - Ghostofapacket
+[2019-06-12 16:13:41.269744] 20190611.01 - INFO - SNSCRAPE - Checking username capitalisation for user Ghostofapacket
+[2019-06-12 16:13:41.920784] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape twitter-user Ghostofapacket2
+[2019-06-12 16:13:41.922078] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:13:41.923022] 20190611.01 - INFO - SNSCRAPE - Job ID 1f70b364c772b9a3cc1125c06265ba4a052edf2f
+[2019-06-12 16:13:41.923175] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: 1f70b364c772b9a3cc1125c06265ba4a052edf2f has been queued.
+[2019-06-12 16:13:41.923262] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - twitter-user - Ghostofapacket2
+[2019-06-12 16:13:41.923636] 20190611.01 - INFO - SNSCRAPE - Checking username capitalisation for user Ghostofapacket2
+[2019-06-12 16:13:42.222773] 20190611.01 - INFO - SNSCRAPE - Finished 530d8be5d9820b3e84668e03e1dc8c7a4f385c59 - Uploading to https://transfer.notkiska.pw/twitter-user-Ghostofapacket
+[2019-06-12 16:13:42.236785] 20190611.01 - INFO - SNSCRAPE - Running with updated settings - snscrape --format '{url} {tcooutlinksss} {outlinksss}'  twitter-user Ghostofapacket >jobs/twitter-@dfeea1dd93833513610a3aa8dcbb27daca55fed8
+[2019-06-12 16:13:42.829296] 20190611.01 - INFO - SNSCRAPE - Twitter user Ghostofapacket2 not found
+[2019-06-12 16:13:42.829493] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: Sorry, No results found for 1f70b364c772b9a3cc1125c06265ba4a052edf2f - User does not exist
+[2019-06-12 16:13:44.529026] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!ao < https://transfer.notkiska.pw/SM6Cl/twitter-@Ghostofapacket --explain "For Igloo - socialscrape job 530d8be5d9820b3e84668e03e1dc8c7a4f385c59" --concurrency 6 --delay 0
+[2019-06-12 16:13:49.398079] 20190611.01 - INFO - SNSCRAPE - Finished dfeea1dd93833513610a3aa8dcbb27daca55fed8 - Uploading to https://transfer.notkiska.pw/twitter-user-Ghostofapacket
+[2019-06-12 16:13:51.603599] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!ao < https://transfer.notkiska.pw/KJSkN/twitter-@Ghostofapacket --explain "For Igloo - socialscrape job dfeea1dd93833513610a3aa8dcbb27daca55fed8" --concurrency 6 --delay 0
+[2019-06-12 16:13:53.376600] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape instagram-user Ghostofapacket
+[2019-06-12 16:13:53.377713] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:13:53.378393] 20190611.01 - INFO - SNSCRAPE - Job ID c9d4e66209745282fe5343bcdfe622a3950210c8
+[2019-06-12 16:13:53.378510] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: c9d4e66209745282fe5343bcdfe622a3950210c8 has been queued.
+[2019-06-12 16:13:53.378612] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - instagram-user - Ghostofapacket
+[2019-06-12 16:13:53.378912] 20190611.01 - INFO - snscrape --format '{dirtyUrl}'  instagram-user Ghostofapacket >jobs/instagram-@c9d4e66209745282fe5343bcdfe622a3950210c8
+[2019-06-12 16:13:53.972726] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: Sorry, No results returned for c9d4e66209745282fe5343bcdfe622a3950210c8 - User does not exist
+[2019-06-12 16:13:59.749512] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape instagram-user bigdinghy
+[2019-06-12 16:13:59.750494] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:13:59.751514] 20190611.01 - INFO - SNSCRAPE - Job ID 26d3240df4739efc552a6f215b56dec3f6f4fbe3
+[2019-06-12 16:13:59.751641] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: 26d3240df4739efc552a6f215b56dec3f6f4fbe3 has been queued.
+[2019-06-12 16:13:59.751734] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - instagram-user - bigdinghy
+[2019-06-12 16:13:59.752045] 20190611.01 - INFO - snscrape --format '{dirtyUrl}'  instagram-user bigdinghy >jobs/instagram-@26d3240df4739efc552a6f215b56dec3f6f4fbe3
+[2019-06-12 16:14:05.173712] 20190611.01 - INFO - SNSCRAPE - Finished 26d3240df4739efc552a6f215b56dec3f6f4fbe3 - Uploading to https://transfer.notkiska.pw/instagram-user-@bigdinghy
+[2019-06-12 16:14:06.982197] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!a < https://transfer.notkiska.pw/kwjZb/instagram-@bigdinghy --explain "For Igloo - socialscrape job 26d3240df4739efc552a6f215b56dec3f6f4fbe3"
+[2019-06-12 16:14:09.985443] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!ignore 4lo1by0v6gl6tvm5xoeduinlw ^https?://www\.instagram\.com/.*[?&]hl=
+[2019-06-12 16:28:52.658034] 20190611.01 - INFO - Starting iBot
+[2019-06-12 16:29:22.844677] 20190611.01 - INFO - Starting iBot
+[2019-06-12 16:29:22.848235] 20190611.01 - INFO - Connecting to IRC server irc.servercentral.net
+[2019-06-12 16:29:22.971592] 20190611.01 - INFO - IRC - USER socialbot socialbot socialbot :I am a bot; https://github.com/Ghostofapacket/iBot/.
+[2019-06-12 16:29:22.971735] 20190611.01 - INFO - IRC - NICK socialbot
+[2019-06-12 16:29:22.971823] 20190611.01 - INFO - IRC - JOIN #ibot
+[2019-06-12 16:29:23.093926] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Processing connection to irc.servercentral.net
+[2019-06-12 16:29:23.198458] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Looking up your hostname...
+[2019-06-12 16:29:23.198595] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Checking Ident
+[2019-06-12 16:29:23.198664] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Found your hostname
+[2019-06-12 16:29:23.320738] 20190611.01 - INFO - IRC - NOTICE AUTH :*** No Ident response
+[2019-06-12 16:29:23.324129] 20190611.01 - INFO - IRC - :irc.servercentral.net 001 socialbot :Welcome to the EFnet Internet Relay Chat Network socialbot
+[2019-06-12 16:29:23.324222] 20190611.01 - INFO - IRC - :irc.servercentral.net 002 socialbot :Your host is irc.servercentral.net[66.225.225.225/6667], running version ircd-ratbox-3.0.6
+[2019-06-12 16:29:23.324282] 20190611.01 - INFO - IRC - :irc.servercentral.net 003 socialbot :This server was created Sat Feb 6 2010 at 17:58:30 CST
+[2019-06-12 16:29:23.324321] 20190611.01 - INFO - IRC - :irc.servercentral.net 004 socialbot irc.servercentral.net ircd-ratbox-3.0.6 oiwszcrkfydnxbauglZCD biklmnopstveIrS bkloveI
+[2019-06-12 16:29:23.324350] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot CHANTYPES=&# EXCEPTS INVEX CHANMODES=eIb,k,l,imnpstS CHANLIMIT=&#:75 PREFIX=(ov)@+ MAXLIST=beI:100 MODES=4 NETWORK=EFnet KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+[2019-06-12 16:29:23.324389] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot SAFELIST ELIST=U CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=9 CHANNELLEN=50 TOPICLEN=160 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=60 :are supported by this server
+[2019-06-12 16:29:23.324423] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+[2019-06-12 16:29:23.324453] 20190611.01 - INFO - IRC - :irc.servercentral.net 251 socialbot :There are 6119 users and 10314 invisible on 24 servers
+[2019-06-12 16:29:23.324479] 20190611.01 - INFO - IRC - :irc.servercentral.net 252 socialbot 109 :IRC Operators online
+[2019-06-12 16:29:23.324523] 20190611.01 - INFO - IRC - :irc.servercentral.net 253 socialbot 2 :unknown connection(s)
+[2019-06-12 16:29:23.324564] 20190611.01 - INFO - IRC - :irc.servercentral.net 254 socialbot 9370 :channels formed
+[2019-06-12 16:29:23.324596] 20190611.01 - INFO - IRC - :irc.servercentral.net 255 socialbot :I have 1106 clients and 2 servers
+[2019-06-12 16:29:23.324623] 20190611.01 - INFO - IRC - :irc.servercentral.net 265 socialbot 1106 3620 :Current local users 1106, max 3620
+[2019-06-12 16:29:23.324663] 20190611.01 - INFO - IRC - :irc.servercentral.net 266 socialbot 16433 21894 :Current global users 16433, max 21894
+[2019-06-12 16:29:23.324692] 20190611.01 - INFO - IRC - :irc.servercentral.net 250 socialbot :Highest connection count: 3622 (3620 clients) (1269697 connections received)
+[2019-06-12 16:29:23.324726] 20190611.01 - INFO - IRC - :irc.servercentral.net 375 socialbot :- irc.servercentral.net Message of the Day -
+[2019-06-12 16:29:23.324752] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                                                _            _
+[2019-06-12 16:29:23.324793] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -             ___ ___ _ ___ _____ _ _ __ ___ _ _| |_ _ _ __ _| |
+[2019-06-12 16:29:23.324822] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            (_-</ -_) '_\ V / -_) '_/ _/ -_) ' \  _| '_/ _` | |
+[2019-06-12 16:29:23.324872] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            /__/\___|_|  \_/\___|_| \__\___|_||_\__|_| \__,_|_|
+[2019-06-12 16:29:23.324913] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:29:23.324956] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -          o Listening on ports: 6660 - 6669, 7000, 8080, 31337 o
+[2019-06-12 16:29:23.324984] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                   o Listening on SSL ports: 9999 o
+[2019-06-12 16:29:23.325027] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -               o Visit us @ http://www.servercentral.com o
+[2019-06-12 16:29:23.325065] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:29:23.325106] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Rules ----------------------------------------------
+[2019-06-12 16:29:23.325136] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:29:23.325176] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Flooding                         o No DoS bots
+[2019-06-12 16:29:23.325236] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No
+[2019-06-12 16:29:23.325334] 20190611.01 - INFO - IRC -  Clones                           o No Spamming
+[2019-06-12 16:29:23.325370] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Takeovers                        o No Whiners
+[2019-06-12 16:29:23.325398] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:29:23.325437] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Staff ----------------------------------------------
+[2019-06-12 16:29:23.325464] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:29:23.325509] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     o Local IRCops may be summoned with the command:  /stats p
+[2019-06-12 16:29:23.325551] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:29:23.325594] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Disclaimer ------------------------------------------------
+[2019-06-12 16:29:23.325622] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:29:23.325664] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     This server, its staff and the people hosting it are *NOT*
+[2019-06-12 16:29:23.325695] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     responsible for the content that passes through this server.
+[2019-06-12 16:29:23.325721] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     Use of this server is a *privilege* which may be removed at
+[2019-06-12 16:29:23.325760] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     any time and for any reason by the friendly server operators.
+[2019-06-12 16:29:23.325804] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:29:23.325834] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- End of MOTD -----------------------------------------------
+[2019-06-12 16:29:23.325865] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-12 16:29:23.325890] 20190611.01 - INFO - IRC - :irc.servercentral.net 376 socialbot :End of /MOTD command.
+[2019-06-12 16:29:23.325934] 20190611.01 - INFO - IRC - :socialbot!~socialbot@static.29.35.217.95.clients.your-server.de JOIN
+[2019-06-12 16:29:23.489860] 20190611.01 - INFO - IRC - :#ibot
+[2019-06-12 16:29:23.489964] 20190611.01 - INFO - IRC - :irc.servercentral.net 353 socialbot = #ibot :socialbot @Igloo
+[2019-06-12 16:29:23.490001] 20190611.01 - INFO - IRC - :irc.servercentral.net 366 socialbot #ibot :End of /NAMES list.
+[2019-06-12 16:29:23.490030] 20190611.01 - INFO - IRC - :DM!irc@services.servercentral.net PRIVMSG socialbot :VERSION
+[2019-06-12 16:29:31.033759] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape instagram-user bigdinghy
+[2019-06-12 16:29:31.035066] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:29:31.035778] 20190611.01 - INFO - SNSCRAPE - Job ID 25c6e8cc48343dc3bd68966b4d3de358e7aa7666
+[2019-06-12 16:29:31.035920] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: 25c6e8cc48343dc3bd68966b4d3de358e7aa7666 has been queued.
+[2019-06-12 16:29:31.036012] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - instagram-user - bigdinghy
+[2019-06-12 16:29:31.036355] 20190611.01 - INFO - snscrape --format '{dirtyUrl}'  instagram-user bigdinghy >jobs/instagram-@25c6e8cc48343dc3bd68966b4d3de358e7aa7666
+[2019-06-12 16:29:36.039755] 20190611.01 - INFO - SNSCRAPE - Finished 25c6e8cc48343dc3bd68966b4d3de358e7aa7666 - Uploading to https://transfer.notkiska.pw/instagram-user-@bigdinghy
+[2019-06-12 16:29:37.860113] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!a < https://transfer.notkiska.pw/cZAV7/instagram-@bigdinghy --explain "For Igloo - socialscrape job 25c6e8cc48343dc3bd68966b4d3de358e7aa7666"
+[2019-06-12 16:29:40.863329] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!ignore 6iwn1j4q03faplvupcg9amv21 ^https?://www\.instagram\.com/.*[?&]hl=
+[2019-06-12 16:30:06.178960] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape instagram-user bigdinghy
+[2019-06-12 16:30:06.180053] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:30:06.180732] 20190611.01 - INFO - SNSCRAPE - Job ID c5ad219641f1dcd1941407776f4762be126ad5c8
+[2019-06-12 16:30:06.180838] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: c5ad219641f1dcd1941407776f4762be126ad5c8 has been queued.
+[2019-06-12 16:30:06.180900] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - instagram-user - bigdinghy
+[2019-06-12 16:30:06.181160] 20190611.01 - INFO - snscrape --format '{dirtyUrl}'  instagram-user bigdinghy >jobs/instagram-@c5ad219641f1dcd1941407776f4762be126ad5c8
+[2019-06-12 16:30:06.922941] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape instagram-user bigdinghy
+[2019-06-12 16:30:06.924012] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:30:06.924701] 20190611.01 - INFO - SNSCRAPE - Job ID 84a8481de71a157c97810343d9b41975b6a8f74f
+[2019-06-12 16:30:06.924826] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: 84a8481de71a157c97810343d9b41975b6a8f74f has been queued.
+[2019-06-12 16:30:06.924903] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - instagram-user - bigdinghy
+[2019-06-12 16:30:06.925175] 20190611.01 - INFO - snscrape --format '{dirtyUrl}'  instagram-user bigdinghy >jobs/instagram-@84a8481de71a157c97810343d9b41975b6a8f74f
+[2019-06-12 16:30:11.378993] 20190611.01 - INFO - SNSCRAPE - Finished c5ad219641f1dcd1941407776f4762be126ad5c8 - Uploading to https://transfer.notkiska.pw/instagram-user-@bigdinghy
+[2019-06-12 16:30:12.625472] 20190611.01 - INFO - SNSCRAPE - Finished 84a8481de71a157c97810343d9b41975b6a8f74f - Uploading to https://transfer.notkiska.pw/instagram-user-@bigdinghy
+[2019-06-12 16:30:13.164844] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!a < https://transfer.notkiska.pw/rUVgt/instagram-@bigdinghy --explain "For Igloo - socialscrape job c5ad219641f1dcd1941407776f4762be126ad5c8"
+[2019-06-12 16:30:14.396856] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!a < https://transfer.notkiska.pw/WAatV/instagram-@bigdinghy --explain "For Igloo - socialscrape job 84a8481de71a157c97810343d9b41975b6a8f74f"
+[2019-06-12 16:30:16.167463] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!ignore 2sesguctaq5kwwdvhgq9hdyav ^https?://www\.instagram\.com/.*[?&]hl=
+[2019-06-12 16:30:17.400050] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!ignore aq4bll9k8ulcmtl2jsfkrrtum ^https?://www\.instagram\.com/.*[?&]hl=
+[2019-06-12 16:30:26.178655] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape instagram-user bigdinghy
+[2019-06-12 16:30:26.180032] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:30:26.180821] 20190611.01 - INFO - SNSCRAPE - Job ID 8a2045d3ee8c020d55e1e5ca6e94245e1342d69f
+[2019-06-12 16:30:26.180968] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: 8a2045d3ee8c020d55e1e5ca6e94245e1342d69f has been queued.
+[2019-06-12 16:30:26.181053] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - instagram-user - bigdinghy
+[2019-06-12 16:30:26.181406] 20190611.01 - INFO - snscrape --format '{dirtyUrl}'  instagram-user bigdinghy >jobs/instagram-@8a2045d3ee8c020d55e1e5ca6e94245e1342d69f
+[2019-06-12 16:30:27.725008] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape instagram-user bigdinghyandanother
+[2019-06-12 16:30:27.726367] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-12 16:30:27.727229] 20190611.01 - INFO - SNSCRAPE - Job ID 7679465db248d315f1b0f3467fc7fb7281c4b86f
+[2019-06-12 16:30:27.727388] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: 7679465db248d315f1b0f3467fc7fb7281c4b86f has been queued.
+[2019-06-12 16:30:27.727479] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - instagram-user - bigdinghyandanother
+[2019-06-12 16:30:27.727844] 20190611.01 - INFO - snscrape --format '{dirtyUrl}'  instagram-user bigdinghyandanother >jobs/instagram-@7679465db248d315f1b0f3467fc7fb7281c4b86f
+[2019-06-12 16:30:28.288611] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: Sorry, No results returned for 7679465db248d315f1b0f3467fc7fb7281c4b86f - User does not exist
+[2019-06-12 16:30:31.282649] 20190611.01 - INFO - SNSCRAPE - Finished 8a2045d3ee8c020d55e1e5ca6e94245e1342d69f - Uploading to https://transfer.notkiska.pw/instagram-user-@bigdinghy
+[2019-06-12 16:30:33.082081] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!a < https://transfer.notkiska.pw/7AcQO/instagram-@bigdinghy --explain "For Igloo - socialscrape job 8a2045d3ee8c020d55e1e5ca6e94245e1342d69f"
+[2019-06-12 16:30:36.083681] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!ignore a8fd39snup9dk198x1e9m3nkc ^https?://www\.instagram\.com/.*[?&]hl=
+[2019-06-12 16:40:59.721675] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 16:40:59.721782] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 16:40:59.722011] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 16:51:11.722510] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 16:51:11.722619] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 16:51:11.722694] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 17:01:23.723334] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 17:01:23.723457] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 17:01:23.723524] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 17:11:35.723753] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 17:11:35.723872] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 17:11:35.723945] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 17:21:47.724374] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 17:21:47.724488] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 17:21:47.724555] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 17:31:59.724024] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 17:31:59.724157] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 17:31:59.724227] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 17:42:11.723946] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 17:42:11.724083] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 17:42:11.724179] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 17:52:23.724029] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 17:52:23.724127] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 17:52:23.724181] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 18:02:35.722536] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 18:02:35.722640] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 18:02:35.722689] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 18:12:47.720720] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 18:12:47.720830] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 18:12:47.720885] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 18:22:59.718132] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 18:22:59.718251] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 18:22:59.718329] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 18:33:11.714315] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 18:33:11.714430] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 18:33:11.714504] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 18:43:23.707812] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 18:43:23.707927] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 18:43:23.707992] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 18:53:35.703879] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 18:53:35.704000] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 18:53:35.704087] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 19:03:47.702211] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 19:03:47.702306] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 19:03:47.702359] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 19:13:59.701355] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 19:13:59.701460] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 19:13:59.701508] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 19:24:11.700962] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 19:24:11.701102] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 19:24:11.701195] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 19:34:23.700676] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 19:34:23.700774] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 19:34:23.700824] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 19:44:35.700772] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 19:44:35.700868] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 19:44:35.700916] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 19:54:47.700993] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 19:54:47.701098] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 19:54:47.701184] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 20:04:59.700760] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 20:04:59.700884] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 20:04:59.700993] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 20:15:11.700931] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 20:15:11.701042] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 20:15:11.701113] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 20:25:23.701282] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 20:25:23.701412] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 20:25:23.701495] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 20:35:35.701290] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 20:35:35.701440] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 20:35:35.701495] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 20:45:47.701590] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 20:45:47.701702] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 20:45:47.701764] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 20:55:59.701760] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 20:55:59.701870] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 20:55:59.701942] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 21:06:11.702049] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 21:06:11.702181] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 21:06:11.702271] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 21:16:23.702358] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 21:16:23.702454] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 21:16:23.702517] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 21:26:35.702786] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 21:26:35.702877] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 21:26:35.702930] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 21:36:47.702841] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 21:36:47.702976] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 21:36:47.703056] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 21:46:59.703332] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 21:46:59.703462] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 21:46:59.703531] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 21:57:11.703211] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 21:57:11.703341] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 21:57:11.703427] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 22:07:23.703316] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 22:07:23.703437] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 22:07:23.703519] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 22:17:35.703377] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 22:17:35.703504] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 22:17:35.703574] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 22:27:47.708647] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 22:27:47.708769] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 22:27:47.708886] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 22:37:59.704472] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 22:37:59.704594] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 22:37:59.704662] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 22:48:11.703941] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 22:48:11.704078] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 22:48:11.704145] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 22:58:23.704038] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 22:58:23.704172] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 22:58:23.704252] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 23:08:35.704114] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 23:08:35.704267] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 23:08:35.704445] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 23:18:47.706593] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 23:18:47.706694] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 23:18:47.706760] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 23:28:59.706618] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 23:28:59.706725] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 23:28:59.706773] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 23:39:11.706502] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 23:39:11.706616] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 23:39:11.706682] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 23:49:23.706206] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 23:49:23.706304] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 23:49:23.706351] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-12 23:59:35.705613] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-12 23:59:35.705709] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-12 23:59:35.705783] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 00:09:47.704692] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 00:09:47.704809] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 00:09:47.704885] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 00:19:59.703754] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 00:19:59.703881] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 00:19:59.703954] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 00:30:11.702896] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 00:30:11.702993] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 00:30:11.703043] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 00:40:23.702334] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 00:40:23.702433] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 00:40:23.702495] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 00:50:35.702055] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 00:50:35.702149] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 00:50:35.702216] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 01:00:47.701853] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 01:00:47.701937] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 01:00:47.702037] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 01:10:59.701788] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 01:10:59.701918] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 01:10:59.701990] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 01:21:11.701551] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 01:21:11.701637] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 01:21:11.701686] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 01:31:23.702220] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 01:31:23.702314] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 01:31:23.702365] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 01:41:35.701408] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 01:41:35.701518] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 01:41:35.701578] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 01:51:47.701375] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 01:51:47.701489] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 01:51:47.701587] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 02:01:59.701868] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 02:01:59.701969] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 02:01:59.702039] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 02:12:11.701269] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 02:12:11.701356] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 02:12:11.701447] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 02:22:23.701342] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 02:22:23.701449] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 02:22:23.701503] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 02:32:35.701384] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 02:32:35.701508] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 02:32:35.701578] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 02:42:47.702181] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 02:42:47.702312] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 02:42:47.702429] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 02:52:59.701144] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 02:52:59.701239] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 02:52:59.701287] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 03:03:11.701194] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 03:03:11.701328] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 03:03:11.701426] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 03:13:23.702773] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 03:13:23.702865] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 03:13:23.702928] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 03:23:35.701291] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 03:23:35.701388] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 03:23:35.701447] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 03:33:47.701106] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 03:33:47.701234] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 03:33:47.701334] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 03:43:59.701056] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 03:43:59.701164] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 03:43:59.701239] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 03:54:11.701012] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 03:54:11.701139] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 03:54:11.701229] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 04:04:23.701889] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 04:04:23.702006] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 04:04:23.702056] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 04:14:35.700871] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 04:14:35.700984] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 04:14:35.701099] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 04:24:47.700884] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 04:24:47.700991] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 04:24:47.701051] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 04:34:59.700819] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 04:34:59.700933] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 04:34:59.701009] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 04:45:11.700757] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 04:45:11.700901] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 04:45:11.700972] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 04:55:23.701361] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 04:55:23.701468] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 04:55:23.701546] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 05:05:35.700743] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 05:05:35.700843] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 05:05:35.700889] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 05:15:47.700667] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 05:15:47.700805] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 05:15:47.700889] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 05:25:59.700552] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 05:25:59.700688] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 05:25:59.700781] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 05:36:11.701104] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 05:36:11.701283] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 05:36:11.701383] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 05:46:23.700424] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 05:46:23.700515] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 05:46:23.700560] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 05:56:35.700327] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 05:56:35.700485] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 05:56:35.700599] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 06:06:47.700100] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 06:06:47.700231] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 06:06:47.700307] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 06:16:59.700133] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 06:16:59.700239] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 06:16:59.700329] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 06:27:11.700079] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 06:27:11.700183] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 06:27:11.700249] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 06:37:23.699816] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 06:37:23.699927] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 06:37:23.700002] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 06:47:35.699700] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 06:47:35.699829] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 06:47:35.699914] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 06:57:47.699801] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 06:57:47.699894] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 06:57:47.699961] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 07:07:59.699863] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 07:07:59.699991] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 07:07:59.700059] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 07:18:11.700475] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 07:18:11.700580] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 07:18:11.700670] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 07:28:23.699873] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 07:28:23.699984] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 07:28:23.700033] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 07:38:35.699749] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 07:38:35.699863] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 07:38:35.699924] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 07:48:47.700807] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 07:48:47.700959] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 07:48:47.701098] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 07:58:59.699662] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 07:58:59.699760] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 07:58:59.699822] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 08:09:11.699359] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 08:09:11.699453] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 08:09:11.699506] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 08:19:23.699316] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 08:19:23.699430] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 08:19:23.699480] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 08:29:35.699122] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 08:29:35.699230] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 08:29:35.699293] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 08:39:47.699095] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 08:39:47.699200] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 08:39:47.699283] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 08:49:59.699011] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 08:49:59.699120] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 08:49:59.699169] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 09:00:11.698835] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 09:00:11.698930] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 09:00:11.698983] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 09:10:23.698839] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 09:10:23.698938] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 09:10:23.698999] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 09:20:35.698759] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 09:20:35.698866] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 09:20:35.698921] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 09:30:47.698608] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 09:30:47.698729] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 09:30:47.698790] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 09:40:59.698549] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 09:40:59.698680] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 09:40:59.698745] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 09:51:11.698524] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 09:51:11.698666] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 09:51:11.698779] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 10:01:23.698507] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 10:01:23.698654] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 10:01:23.698724] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 10:11:35.698481] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 10:11:35.698616] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 10:11:35.698710] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 10:21:47.698184] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 10:21:47.698302] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 10:21:47.698412] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 10:31:59.697513] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 10:31:59.697637] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 10:31:59.697711] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 10:42:11.697040] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 10:42:11.697172] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 10:42:11.697284] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 10:52:23.696095] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 10:52:23.696202] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 10:52:23.696286] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 11:02:35.695180] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 11:02:35.695280] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 11:02:35.695340] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 11:12:47.693427] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 11:12:47.693536] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 11:12:47.693583] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 11:22:59.692235] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 11:22:59.692357] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 11:22:59.692425] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 11:33:11.690398] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 11:33:11.690527] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 11:33:11.690593] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 11:43:23.688844] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 11:43:23.688951] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 11:43:23.689003] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 11:53:35.687409] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 11:53:35.687519] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 11:53:35.687576] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 12:03:47.686191] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 12:03:47.686293] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 12:03:47.686340] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 12:13:59.682681] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 12:13:59.682807] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 12:13:59.682886] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 12:24:11.682340] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 12:24:11.682436] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 12:24:11.682487] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 12:34:23.682238] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 12:34:23.682334] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 12:34:23.682404] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 12:44:35.682740] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 12:44:35.682852] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 12:44:35.682914] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 12:54:47.683432] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 12:54:47.683543] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 12:54:47.683610] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 13:04:59.684298] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 13:04:59.684416] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 13:04:59.684482] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 13:15:11.684906] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 13:15:11.685027] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 13:15:11.685124] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 13:25:23.686731] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 13:25:23.686832] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 13:25:23.686893] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 13:35:35.686197] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 13:35:35.686320] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 13:35:35.686376] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 13:45:47.686765] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 13:45:47.686860] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 13:45:47.686919] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 13:55:59.687179] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 13:55:59.687296] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 13:55:59.687344] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 14:06:11.688640] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 14:06:11.688764] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 14:06:11.688855] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 14:16:23.689311] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 14:16:23.689428] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 14:16:23.689502] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 14:26:35.690344] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 14:26:35.690440] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 14:26:35.690490] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 14:36:47.691382] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 14:36:47.691535] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 14:36:47.691617] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 14:46:59.692819] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 14:46:59.692926] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 14:46:59.693001] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 14:57:11.694019] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 14:57:11.694126] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 14:57:11.694173] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 15:07:23.695332] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 15:07:23.695470] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 15:07:23.695554] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 15:17:35.696839] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 15:17:35.696992] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 15:17:35.697115] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 15:27:47.698572] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 15:27:47.698661] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 15:27:47.698722] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 15:37:59.698667] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 15:37:59.698776] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 15:37:59.698836] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 15:48:11.699760] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 15:48:11.699888] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 15:48:11.699982] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 15:58:23.700538] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 15:58:23.700667] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 15:58:23.700734] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 16:08:35.702862] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 16:08:35.702978] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 16:08:35.703057] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 16:18:47.701449] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 16:18:47.701547] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 16:18:47.701614] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 16:28:59.702063] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 16:28:59.702176] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 16:28:59.702225] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 16:39:11.702800] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 16:39:11.702937] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 16:39:11.703007] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 16:49:23.703668] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 16:49:23.703813] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 16:49:23.703906] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 16:59:35.703755] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 16:59:35.703889] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 16:59:35.703980] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 17:09:47.704860] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 17:09:47.705115] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 17:09:47.705190] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 17:19:59.704160] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 17:19:59.704290] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 17:19:59.704378] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 17:30:11.705869] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 17:30:11.705981] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 17:30:11.706053] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 17:40:23.703259] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 17:40:23.703357] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 17:40:23.703423] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 17:50:35.703359] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 17:50:35.703474] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 17:50:35.703540] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 18:00:47.702059] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 18:00:47.702185] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 18:00:47.702256] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 18:10:59.701126] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 18:10:59.701243] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 18:10:59.701318] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 18:21:11.700102] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 18:21:11.700229] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 18:21:11.700297] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 18:31:23.699064] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 18:31:23.699162] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 18:31:23.699208] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 18:41:35.697910] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 18:41:35.698037] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 18:41:35.698103] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 18:51:47.696847] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 18:51:47.696973] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 18:51:47.697058] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 19:01:59.695842] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 19:01:59.695977] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 19:01:59.696055] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 19:12:11.694847] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 19:12:11.694956] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 19:12:11.695015] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 19:20:31.255826] 20190611.01 - INFO - Starting iBot
+[2019-06-13 19:20:31.267480] 20190611.01 - INFO - Connecting to IRC server irc.servercentral.net
+[2019-06-13 19:20:31.443684] 20190611.01 - INFO - IRC - USER socialbot socialbot socialbot :I am a bot; https://github.com/Ghostofapacket/iBot/.
+[2019-06-13 19:20:31.443866] 20190611.01 - INFO - IRC - NICK socialbot
+[2019-06-13 19:20:31.443943] 20190611.01 - INFO - IRC - JOIN #ibot
+[2019-06-13 19:20:31.562576] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Processing connection to irc.servercentral.net
+[2019-06-13 19:20:31.666360] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Looking up your hostname...
+[2019-06-13 19:20:31.666497] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Checking Ident
+[2019-06-13 19:20:31.785248] 20190611.01 - INFO - IRC - NOTICE AUTH :*** No Ident response
+[2019-06-13 19:20:31.921758] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Found your hostname
+[2019-06-13 19:20:31.921869] 20190611.01 - INFO - IRC - :irc.servercentral.net 001 socialbot :Welcome to the EFnet Internet Relay Chat Network socialbot
+[2019-06-13 19:20:31.921929] 20190611.01 - INFO - IRC - :irc.servercentral.net 002 socialbot :Your host is irc.servercentral.net[66.225.225.225/6667], running version ircd-ratbox-3.0.6
+[2019-06-13 19:20:31.921973] 20190611.01 - INFO - IRC - :irc.servercentral.net 003 socialbot :This server was created Sat Feb 6 2010 at 17:58:30 CST
+[2019-06-13 19:20:31.922015] 20190611.01 - INFO - IRC - :irc.servercentral.net 004 socialbot irc.servercentral.net ircd-ratbox-3.0.6 oiwszcrkfydnxbauglZCD biklmnopstveIrS bkloveI
+[2019-06-13 19:20:31.922055] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot CHANTYPES=&# EXCEPTS INVEX CHANMODES=eIb,k,l,imnpstS CHANLIMIT=&#:75 PREFIX=(ov)@+ MAXLIST=beI:100 MODES=4 NETWORK=EFnet KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+[2019-06-13 19:20:31.922106] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot SAFELIST ELIST=U CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=9 CHANNELLEN=50 TOPICLEN=160 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=60 :are supported by this server
+[2019-06-13 19:20:31.922164] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+[2019-06-13 19:20:31.922205] 20190611.01 - INFO - IRC - :irc.servercentral.net 251 socialbot :There are 6158 users and 10528 invisible on 24 servers
+[2019-06-13 19:20:31.922244] 20190611.01 - INFO - IRC - :irc.servercentral.net 252 socialbot 112 :IRC Operators online
+[2019-06-13 19:20:31.922283] 20190611.01 - INFO - IRC - :irc.servercentral.net 254 socialbot 9414 :channels formed
+[2019-06-13 19:20:31.922321] 20190611.01 - INFO - IRC - :irc.servercentral.net 255 socialbot :I have 1239 clients and 2 servers
+[2019-06-13 19:20:31.922359] 20190611.01 - INFO - IRC - :irc.servercentral.net 265 socialbot 1239 3620 :Current local users 1239, max 3620
+[2019-06-13 19:20:31.922396] 20190611.01 - INFO - IRC - :irc.servercentral.net 266
+[2019-06-13 19:20:31.922492] 20190611.01 - INFO - IRC -  socialbot 16686 21894 :Current global users 16686, max 21894
+[2019-06-13 19:20:31.922538] 20190611.01 - INFO - IRC - :irc.servercentral.net 250 socialbot :Highest connection count: 3622 (3620 clients) (1274313 connections received)
+[2019-06-13 19:20:31.922582] 20190611.01 - INFO - IRC - :irc.servercentral.net 375 socialbot :- irc.servercentral.net Message of the Day -
+[2019-06-13 19:20:31.922621] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                                                _            _
+[2019-06-13 19:20:31.922659] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -             ___ ___ _ ___ _____ _ _ __ ___ _ _| |_ _ _ __ _| |
+[2019-06-13 19:20:31.922698] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            (_-</ -_) '_\ V / -_) '_/ _/ -_) ' \  _| '_/ _` | |
+[2019-06-13 19:20:31.922736] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            /__/\___|_|  \_/\___|_| \__\___|_||_\__|_| \__,_|_|
+[2019-06-13 19:20:31.922773] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:20:31.922812] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -          o Listening on ports: 6660 - 6669, 7000, 8080, 31337 o
+[2019-06-13 19:20:31.922850] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                   o Listening on SSL ports: 9999 o
+[2019-06-13 19:20:31.922889] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -               o Visit us @ http://www.servercentral.com o
+[2019-06-13 19:20:31.922927] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:20:31.922965] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Rules ----------------------------------------------
+[2019-06-13 19:20:31.923003] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:20:31.923041] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Flooding                         o No DoS bots
+[2019-06-13 19:20:31.923079] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Clones                           o No Spamming
+[2019-06-13 19:20:31.923116] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Takeovers                        o No Whiners
+[2019-06-13 19:20:31.923154] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:20:31.923192] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Staff ----------------------------------------------
+[2019-06-13 19:20:31.923229] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:20:31.923267] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     o Local IRCops may be summoned with the command:  /stats p
+[2019-06-13 19:20:31.923309] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:20:31.923348] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Disclaimer ------------------------------------------------
+[2019-06-13 19:20:31.923385] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:20:31.923423] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     This server, its staff and the people hosting it are *NOT*
+[2019-06-13 19:20:31.923461] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     responsible for the content that passes through this server.
+[2019-06-13 19:20:31.923499] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     Use of this server is a *privilege* which may be removed at
+[2019-06-13 19:20:31.923537] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     any time and for any reason by the friendly server operators.
+[2019-06-13 19:20:31.923587] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:20:31.923627] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- End of MOTD -----------------------------------------------
+[2019-06-13 19:20:31.923665] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:20:31.923703] 20190611.01 - INFO - IRC - :irc.servercentral.net 376 socialbot :End of /MOTD command.
+[2019-06-13 19:20:31.923741] 20190611.01 - INFO - IRC - :socialbot!~socialbot@static.29.35.217.95.clients.your-server.de JOIN :#ibot
+[2019-06-13 19:20:31.923779] 20190611.01 - INFO - IRC - :irc.servercentra
+[2019-06-13 19:20:32.040832] 20190611.01 - INFO - IRC - l.net 353 socialbot = #ibot :socialbot @Igloo
+[2019-06-13 19:20:32.040948] 20190611.01 - INFO - IRC - :irc.servercentral.net 366 socialbot #ibot :End of /NAMES list.
+[2019-06-13 19:20:32.040996] 20190611.01 - INFO - IRC - :DM!irc@services.servercentral.net PRIVMSG socialbot :VERSION
+[2019-06-13 19:23:35.078046] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape instagram-user bigdinghyandanother
+[2019-06-13 19:23:35.079181] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-13 19:23:37.555430] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape instagram-user bigdinghy
+[2019-06-13 19:23:37.556013] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-13 19:24:07.184302] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot: snscrape twitter-user ghostofapacket
+[2019-06-13 19:24:15.044738] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape twitter-user ghostofapacket
+[2019-06-13 19:24:15.045956] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-13 19:24:15.046741] 20190611.01 - INFO - SNSCRAPE - Job ID dbf8a307e3dd426e1700296ce85cad6c7a6a1885
+[2019-06-13 19:24:15.046895] 20190611.01 - INFO - IRC - PRIVMSG #ibot :Igloo: dbf8a307e3dd426e1700296ce85cad6c7a6a1885 has been queued.
+[2019-06-13 19:24:15.046988] 20190611.01 - INFO - SNSCRAPE - Trying to run snscrape with the following arguments - twitter-user - ghostofapacket
+[2019-06-13 19:24:15.047353] 20190611.01 - INFO - SNSCRAPE - Checking username capitalisation for user ghostofapacket
+[2019-06-13 19:24:16.191779] 20190611.01 - INFO - SNSCRAPE - Running with updated settings - snscrape --format '{url} {tcooutlinksss} {outlinksss}'  twitter-user Ghostofapacket >jobs/twitter-@dbf8a307e3dd426e1700296ce85cad6c7a6a1885
+[2019-06-13 19:24:23.217312] 20190611.01 - INFO - SNSCRAPE - Finished dbf8a307e3dd426e1700296ce85cad6c7a6a1885 - Uploading to https://transfer.notkiska.pw/twitter-user-ghostofapacket
+[2019-06-13 19:24:25.455209] 20190611.01 - INFO - IRC - PRIVMSG #ibot :!ao < https://transfer.notkiska.pw/ZbYEB/twitter-@Ghostofapacket --explain "For Igloo - socialscrape job dbf8a307e3dd426e1700296ce85cad6c7a6a1885" --concurrency 6 --delay 0
+[2019-06-13 19:25:10.439205] 20190611.01 - INFO - Starting iBot
+[2019-06-13 19:25:10.442693] 20190611.01 - INFO - Connecting to IRC server irc.servercentral.net
+[2019-06-13 19:25:10.564285] 20190611.01 - INFO - IRC - USER socialbot socialbot socialbot :I am a bot; https://github.com/Ghostofapacket/iBot/.
+[2019-06-13 19:25:10.564441] 20190611.01 - INFO - IRC - NICK socialbot
+[2019-06-13 19:25:10.564539] 20190611.01 - INFO - IRC - JOIN #ibot
+[2019-06-13 19:25:10.684922] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Processing connection to irc.servercentral.net
+[2019-06-13 19:25:10.785571] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Looking up your hostname...
+[2019-06-13 19:25:10.785680] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Checking Ident
+[2019-06-13 19:25:10.785730] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Found your hostname
+[2019-06-13 19:25:10.906081] 20190611.01 - INFO - IRC - NOTICE AUTH :*** No Ident response
+[2019-06-13 19:25:10.909460] 20190611.01 - INFO - IRC - :irc.servercentral.net 001 socialbot :Welcome to the EFnet Internet Relay Chat Network socialbot
+[2019-06-13 19:25:10.909539] 20190611.01 - INFO - IRC - :irc.servercentral.net 002 socialbot :Your host is irc.servercentral.net[66.225.225.225/6667], running version ircd-ratbox-3.0.6
+[2019-06-13 19:25:10.909591] 20190611.01 - INFO - IRC - :irc.servercentral.net 003 socialbot :This server was created Sat Feb 6 2010 at 17:58:30 CST
+[2019-06-13 19:25:10.909635] 20190611.01 - INFO - IRC - :irc.servercentral.net 004 socialbot irc.servercentral.net ircd-ratbox-3.0.6 oiwszcrkfydnxbauglZCD biklmnopstveIrS bkloveI
+[2019-06-13 19:25:10.909680] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot CHANTYPES=&# EXCEPTS INVEX CHANMODES=eIb,k,l,imnpstS CHANLIMIT=&#:75 PREFIX=(ov)@+ MAXLIST=beI:100 MODES=4 NETWORK=EFnet KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+[2019-06-13 19:25:10.909730] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot SAFELIST ELIST=U CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=9 CHANNELLEN=50 TOPICLEN=160 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=60 :are supported by this server
+[2019-06-13 19:25:10.909780] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+[2019-06-13 19:25:10.909821] 20190611.01 - INFO - IRC - :irc.servercentral.net 251 socialbot :There are 6165 users and 10515 invisible on 24 servers
+[2019-06-13 19:25:10.909863] 20190611.01 - INFO - IRC - :irc.servercentral.net 252 socialbot 112 :IRC Operators online
+[2019-06-13 19:25:10.909904] 20190611.01 - INFO - IRC - :irc.servercentral.net 254 socialbot 9406 :channels formed
+[2019-06-13 19:25:10.909945] 20190611.01 - INFO - IRC - :irc.servercentral.net 255 socialbot :I have 1240 clients and 2 servers
+[2019-06-13 19:25:10.909972] 20190611.01 - INFO - IRC - :irc.servercentral.net 265 socialbot 1240 3620 :Current local users 1240, max 3620
+[2019-06-13 19:25:10.909999] 20190611.01 - INFO - IRC - :irc.servercentral.net 266 socialbot 16680 21894 :Current global
+[2019-06-13 19:25:10.910061] 20190611.01 - INFO - IRC -  users 16680, max 21894
+[2019-06-13 19:25:10.910093] 20190611.01 - INFO - IRC - :irc.servercentral.net 250 socialbot :Highest connection count: 3622 (3620 clients) (1274317 connections received)
+[2019-06-13 19:25:10.910126] 20190611.01 - INFO - IRC - :irc.servercentral.net 375 socialbot :- irc.servercentral.net Message of the Day -
+[2019-06-13 19:25:10.910154] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                                                _            _
+[2019-06-13 19:25:10.910181] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -             ___ ___ _ ___ _____ _ _ __ ___ _ _| |_ _ _ __ _| |
+[2019-06-13 19:25:10.910209] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            (_-</ -_) '_\ V / -_) '_/ _/ -_) ' \  _| '_/ _` | |
+[2019-06-13 19:25:10.910236] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            /__/\___|_|  \_/\___|_| \__\___|_||_\__|_| \__,_|_|
+[2019-06-13 19:25:10.910269] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:25:10.910298] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -          o Listening on ports: 6660 - 6669, 7000, 8080, 31337 o
+[2019-06-13 19:25:10.910324] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                   o Listening on SSL ports: 9999 o
+[2019-06-13 19:25:10.910351] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -               o Visit us @ http://www.servercentral.com o
+[2019-06-13 19:25:10.910377] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:25:10.910404] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Rules ----------------------------------------------
+[2019-06-13 19:25:10.910430] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:25:10.910457] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Flooding                         o No DoS bots
+[2019-06-13 19:25:10.910484] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Clones                           o No Spamming
+[2019-06-13 19:25:10.910510] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Takeovers                        o No Whiners
+[2019-06-13 19:25:10.910536] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:25:10.910563] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Staff ----------------------------------------------
+[2019-06-13 19:25:10.910589] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:25:10.910615] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     o Local IRCops may be summoned with the command:  /stats p
+[2019-06-13 19:25:10.910641] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:25:10.910668] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Disclaimer ------------------------------------------------
+[2019-06-13 19:25:10.910694] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:25:10.910720] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     This server, its staff and the people hosting it are *NOT*
+[2019-06-13 19:25:10.910746] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     responsible for the content that passes through this server.
+[2019-06-13 19:25:10.910772] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     Use of this server is a *privilege* which may be removed at
+[2019-06-13 19:25:10.910799] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     any time and for any reason by the friendly server operators.
+[2019-06-13 19:25:10.910825] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:25:10.910851] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- End of MOTD -----------------------------------------------
+[2019-06-13 19:25:10.910877] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:25:10.910903] 20190611.01 - INFO - IRC - :irc.servercentral.net 376 socialbot :End of /MOTD command.
+[2019-06-13 19:25:10.910929] 20190611.01 - INFO - IRC - :socialbot!~socialbot@static.29.35.217.95.clients.your-server.de JOIN :#ibot
+[2019-06-13 19:25:10.910955] 20190611.01 - INFO - IRC - :irc.servercentral.net 353 socialbot = #ibot :socialbot
+[2019-06-13 19:25:11.030252] 20190611.01 - INFO - IRC -  @Igloo
+[2019-06-13 19:25:11.030370] 20190611.01 - INFO - IRC - :irc.servercentral.net 366 socialbot #ibot :End of /NAMES list.
+[2019-06-13 19:25:11.030421] 20190611.01 - INFO - IRC - :DM!irc@services.servercentral.net PRIVMSG socialbot :VERSION
+[2019-06-13 19:25:16.440038] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape instagram-user bigdinghy
+[2019-06-13 19:25:16.440909] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-13 19:26:28.338018] 20190611.01 - INFO - Starting iBot
+[2019-06-13 19:26:28.342800] 20190611.01 - INFO - Connecting to IRC server irc.servercentral.net
+[2019-06-13 19:26:28.462225] 20190611.01 - INFO - IRC - USER socialbot socialbot socialbot :I am a bot; https://github.com/Ghostofapacket/iBot/.
+[2019-06-13 19:26:28.462381] 20190611.01 - INFO - IRC - NICK socialbot
+[2019-06-13 19:26:28.462459] 20190611.01 - INFO - IRC - JOIN #ibot
+[2019-06-13 19:26:28.580857] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Processing connection to irc.servercentral.net
+[2019-06-13 19:26:28.687041] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Looking up your hostname...
+[2019-06-13 19:26:28.687146] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Checking Ident
+[2019-06-13 19:26:28.687201] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Found your hostname
+[2019-06-13 19:26:28.805864] 20190611.01 - INFO - IRC - NOTICE AUTH :*** No Ident response
+[2019-06-13 19:26:28.809304] 20190611.01 - INFO - IRC - :irc.servercentral.net 001 socialbot :Welcome to the EFnet Internet Relay Chat Network socialbot
+[2019-06-13 19:26:28.809414] 20190611.01 - INFO - IRC - :irc.servercentral.net 002 socialbot :Your host is irc.servercentral.net[66.225.225.225/6667], running version ircd-ratbox-3.0.6
+[2019-06-13 19:26:28.809464] 20190611.01 - INFO - IRC - :irc.servercentral.net 003 socialbot :This server was created Sat Feb 6 2010 at 17:58:30 CST
+[2019-06-13 19:26:28.809507] 20190611.01 - INFO - IRC - :irc.servercentral.net 004 socialbot irc.servercentral.net ircd-ratbox-3.0.6 oiwszcrkfydnxbauglZCD biklmnopstveIrS bkloveI
+[2019-06-13 19:26:28.809547] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot CHANTYPES=&# EXCEPTS INVEX CHANMODES=eIb,k,l,imnpstS CHANLIMIT=&#:75 PREFIX=(ov)@+ MAXLIST=beI:100 MODES=4 NETWORK=EFnet KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+[2019-06-13 19:26:28.809600] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot SAFELIST ELIST=U CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=9 CHANNELLEN=50 TOPICLEN=160 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=60 :are supported by this server
+[2019-06-13 19:26:28.809648] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+[2019-06-13 19:26:28.809687] 20190611.01 - INFO - IRC - :irc.servercentral.net 251 socialbot :There are 6161 users and 10515 invisible on 24 servers
+[2019-06-13 19:26:28.809726] 20190611.01 - INFO - IRC - :irc.servercentral.net 252 socialbot 112 :IRC Operators online
+[2019-06-13 19:26:28.809766] 20190611.01 - INFO - IRC - :irc.servercentral.net 253 socialbot 1 :unknown connection(s)
+[2019-06-13 19:26:28.809805] 20190611.01 - INFO - IRC - :irc.servercentral.net 254 socialbot 9405 :channels formed
+[2019-06-13 19:26:28.809845] 20190611.01 - INFO - IRC - :irc.servercentral.net 255 socialbot :I have 1238 clients and 2 servers
+[2019-06-13 19:26:28.809884] 20190611.01 - INFO - IRC - :irc.servercentral.net 265 socialbot 1238 3620 :Current local users 1238, max 3620
+[2019-06-13 19:26:28.809923] 20190611.01 - INFO - IRC - :
+[2019-06-13 19:26:28.810018] 20190611.01 - INFO - IRC - irc.servercentral.net 266 socialbot 16676 21894 :Current global users 16676, max 21894
+[2019-06-13 19:26:28.810067] 20190611.01 - INFO - IRC - :irc.servercentral.net 250 socialbot :Highest connection count: 3622 (3620 clients) (1274318 connections received)
+[2019-06-13 19:26:28.810115] 20190611.01 - INFO - IRC - :irc.servercentral.net 375 socialbot :- irc.servercentral.net Message of the Day -
+[2019-06-13 19:26:28.810156] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                                                _            _
+[2019-06-13 19:26:28.810193] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -             ___ ___ _ ___ _____ _ _ __ ___ _ _| |_ _ _ __ _| |
+[2019-06-13 19:26:28.810243] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            (_-</ -_) '_\ V / -_) '_/ _/ -_) ' \  _| '_/ _` | |
+[2019-06-13 19:26:28.810283] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            /__/\___|_|  \_/\___|_| \__\___|_||_\__|_| \__,_|_|
+[2019-06-13 19:26:28.810318] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:26:28.810354] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -          o Listening on ports: 6660 - 6669, 7000, 8080, 31337 o
+[2019-06-13 19:26:28.810390] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                   o Listening on SSL ports: 9999 o
+[2019-06-13 19:26:28.810425] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -               o Visit us @ http://www.servercentral.com o
+[2019-06-13 19:26:28.810460] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:26:28.810496] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Rules ----------------------------------------------
+[2019-06-13 19:26:28.810531] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:26:28.810566] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Flooding                         o No DoS bots
+[2019-06-13 19:26:28.810602] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Clones                           o No Spamming
+[2019-06-13 19:26:28.810637] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Takeovers                        o No Whiners
+[2019-06-13 19:26:28.810673] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:26:28.810712] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Staff ----------------------------------------------
+[2019-06-13 19:26:28.810749] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:26:28.810784] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     o Local IRCops may be summoned with the command:  /stats p
+[2019-06-13 19:26:28.810825] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:26:28.810863] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Disclaimer ------------------------------------------------
+[2019-06-13 19:26:28.810901] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:26:28.810939] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     This server, its staff and the people hosting it are *NOT*
+[2019-06-13 19:26:28.810977] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     responsible for the content that passes through this server.
+[2019-06-13 19:26:28.811013] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     Use of this server is a *privilege* which may be removed at
+[2019-06-13 19:26:28.811049] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     any time and for any reason by the friendly server operators.
+[2019-06-13 19:26:28.811086] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:26:28.811124] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- End of MOTD -----------------------------------------------
+[2019-06-13 19:26:28.811163] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:26:28.811198] 20190611.01 - INFO - IRC - :irc.servercentral.net 376 socialbot :End of /MOTD command.
+[2019-06-13 19:26:28.811234] 20190611.01 - INFO - IRC - :socialbot!~socialbot@static.29.35.217.95.clients.your-server.de JOIN
+[2019-06-13 19:26:28.928188] 20190611.01 - INFO - IRC - :#ibot
+[2019-06-13 19:26:28.928307] 20190611.01 - INFO - IRC - :irc.servercentral.net 353 socialbot = #ibot :socialbot @Igloo
+[2019-06-13 19:26:28.928368] 20190611.01 - INFO - IRC - :irc.servercentral.net 366 socialbot #ibot :End of /NAMES list.
+[2019-06-13 19:26:28.928410] 20190611.01 - INFO - IRC - :DM!irc@services.servercentral.net PRIVMSG socialbot :VERSION
+[2019-06-13 19:26:33.492874] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape instagram-user bigdinghy
+[2019-06-13 19:28:27.968538] 20190611.01 - INFO - Starting iBot
+[2019-06-13 19:28:27.972230] 20190611.01 - INFO - Connecting to IRC server irc.servercentral.net
+[2019-06-13 19:28:28.097733] 20190611.01 - INFO - IRC - USER socialbot socialbot socialbot :I am a bot; https://github.com/Ghostofapacket/iBot/.
+[2019-06-13 19:28:28.097887] 20190611.01 - INFO - IRC - NICK socialbot
+[2019-06-13 19:28:28.097969] 20190611.01 - INFO - IRC - JOIN #ibot
+[2019-06-13 19:28:28.224111] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Processing connection to irc.servercentral.net
+[2019-06-13 19:28:28.346094] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Looking up your hostname...
+[2019-06-13 19:28:28.346228] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Checking Ident
+[2019-06-13 19:28:28.346287] 20190611.01 - INFO - IRC - NOTICE AUTH :*** Found your hostname
+[2019-06-13 19:28:28.468003] 20190611.01 - INFO - IRC - NOTICE AUTH :*** No Ident response
+[2019-06-13 19:28:28.818750] 20190611.01 - INFO - IRC - :irc.servercentral.net 001 socialbot :Welcome to the EFnet Internet Relay Chat Network socialbot
+[2019-06-13 19:28:28.818876] 20190611.01 - INFO - IRC - :irc.servercentral.net 002 socialbot :Your host is irc.servercentral.net[66.225.225.225/6667], running version ircd-ratbox-3.0.6
+[2019-06-13 19:28:28.818931] 20190611.01 - INFO - IRC - :irc.servercentral.net 003 socialbot :This server was created Sat Feb 6 2010 at 17:58:30 CST
+[2019-06-13 19:28:28.818977] 20190611.01 - INFO - IRC - :irc.servercentral.net 004 socialbot irc.servercentral.net ircd-ratbox-3.0.6 oiwszcrkfydnxbauglZCD biklmnopstveIrS bkloveI
+[2019-06-13 19:28:28.819022] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot CHANTYPES=&# EXCEPTS INVEX CHANMODES=eIb,k,l,imnpstS CHANLIMIT=&#:75 PREFIX=(ov)@+ MAXLIST=beI:100 MODES=4 NETWORK=EFnet KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+[2019-06-13 19:28:28.819076] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot SAFELIST ELIST=U CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=9 CHANNELLEN=50 TOPICLEN=160 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=60 :are supported by this server
+[2019-06-13 19:28:28.819127] 20190611.01 - INFO - IRC - :irc.servercentral.net 005 socialbot FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+[2019-06-13 19:28:28.819169] 20190611.01 - INFO - IRC - :irc.servercentral.net 251 socialbot :There are 6163 users and 10513 invisible on 24 servers
+[2019-06-13 19:28:28.819211] 20190611.01 - INFO - IRC - :irc.servercentral.net 252 socialbot 112 :IRC Operators online
+[2019-06-13 19:28:28.819252] 20190611.01 - INFO - IRC - :irc.servercentral.net 253 socialbot 1 :unknown connection(s)
+[2019-06-13 19:28:28.819293] 20190611.01 - INFO - IRC - :irc.servercentral.net 254 socialbot 9406 :channels formed
+[2019-06-13 19:28:28.819333] 20190611.01 - INFO - IRC - :irc.servercentral.net 255 socialbot :I have 1237 clients and 2 servers
+[2019-06-13 19:28:28.819374] 20190611.01 - INFO - IRC - :irc.servercentral.net 265 socialbot 1237 3620 :Current local users 1237, max 3620
+[2019-06-13 19:28:28.819414] 20190611.01 - INFO - IRC - :irc.servercentral.net 266 socialbot 16676 21894 :Current global users 16676, max 21894
+[2019-06-13 19:28:28.819454] 20190611.01 - INFO - IRC - :irc.servercentral.net 250 socialbot :Highest connection count: 3622 (3620 clients) (1274320 connections received)
+[2019-06-13 19:28:28.819501] 20190611.01 - INFO - IRC - :irc.servercentral.net 375 socialbot :- irc.servercentral.net Message of the Day -
+[2019-06-13 19:28:28.819542] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                                                _            _
+[2019-06-13 19:28:28.819607] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -             ___ ___ _ ___ _____ _ _ __ ___ _ _| |_ _ _ __ _| |
+[2019-06-13 19:28:28.819649] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            (_-</ -_) '_\ V / -_) '_/ _/ -_) ' \  _| '_/ _` | |
+[2019-06-13 19:28:28.819690] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -            /__/\___|_|  \_/\___|_| \__\___|_||_\__|_| \__,_|_|
+[2019-06-13 19:28:28.819730] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:28:28.819772] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -          o Listening on ports: 6660 - 6669, 7000, 8080, 31337 o
+[2019-06-13 19:28:28.819812] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -                   o Listening on SSL ports: 9999 o
+[2019-06-13 19:28:28.819851] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -               o Visit us @ http://www.servercentral.com o
+[2019-06-13 19:28:28.819890] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:28:28.819930] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Rules ----------------------------------------------
+[2019-06-13 19:28:28.819970] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:28:28.820009] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Flooding                         o No DoS bots
+[2019-06-13 19:28:28.820048] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No
+[2019-06-13 19:28:28.820170] 20190611.01 - INFO - IRC -  Clones                           o No Spamming
+[2019-06-13 19:28:28.820215] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -        o No Takeovers                        o No Whiners
+[2019-06-13 19:28:28.820256] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:28:28.820295] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Server Staff ----------------------------------------------
+[2019-06-13 19:28:28.820335] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:28:28.820374] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     o Local IRCops may be summoned with the command:  /stats p
+[2019-06-13 19:28:28.820413] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:28:28.820452] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- Disclaimer ------------------------------------------------
+[2019-06-13 19:28:28.820492] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:28:28.820531] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     This server, its staff and the people hosting it are *NOT*
+[2019-06-13 19:28:28.820572] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     responsible for the content that passes through this server.
+[2019-06-13 19:28:28.820611] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     Use of this server is a *privilege* which may be removed at
+[2019-06-13 19:28:28.820650] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -     any time and for any reason by the friendly server operators.
+[2019-06-13 19:28:28.820689] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:28:28.820728] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -  -------- End of MOTD -----------------------------------------------
+[2019-06-13 19:28:28.820766] 20190611.01 - INFO - IRC - :irc.servercentral.net 372 socialbot :- -
+[2019-06-13 19:28:28.820805] 20190611.01 - INFO - IRC - :irc.servercentral.net 376 socialbot :End of /MOTD command.
+[2019-06-13 19:28:28.941041] 20190611.01 - INFO - IRC - :socialbot!~socialbot@static.29.35.217.95.clients.your-server.de JOIN :#ibot
+[2019-06-13 19:28:28.941147] 20190611.01 - INFO - IRC - :irc.servercentral.net 353 socialbot = #ibot :socialbot @Igloo
+[2019-06-13 19:28:28.941184] 20190611.01 - INFO - IRC - :irc.servercentral.net 366 socialbot #ibot :End of /NAMES list.
+[2019-06-13 19:28:28.941236] 20190611.01 - INFO - IRC - :DM!irc@services.servercentral.net PRIVMSG socialbot :VERSION
+[2019-06-13 19:28:32.689456] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape instagram-user bigdinghy
+[2019-06-13 19:28:32.690464] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-13 19:34:32.176471] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com PRIVMSG #ibot :socialbot snscrape instagram-user bigdinghy
+[2019-06-13 19:34:32.176944] 20190611.01 - INFO - COMMAND - Received in channel #ibot - snscrape
+[2019-06-13 19:38:35.691502] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 19:38:35.691629] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 19:38:35.691784] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 19:48:47.690453] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 19:48:47.690558] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 19:48:47.690611] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 19:58:59.689821] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 19:58:59.689924] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 19:58:59.689971] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 20:09:11.689400] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 20:09:11.689513] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 20:09:11.689566] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 20:19:23.688645] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 20:19:23.688766] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 20:19:23.688839] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 20:29:35.688229] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 20:29:35.688337] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 20:29:35.688390] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 20:39:47.688229] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 20:39:47.688372] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 20:39:47.688465] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 20:49:59.688201] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 20:49:59.688320] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 20:49:59.688368] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 21:00:11.688137] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 21:00:11.688262] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 21:00:11.688312] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 21:10:23.688069] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 21:10:23.688182] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 21:10:23.688248] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 21:20:35.688124] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 21:20:35.688256] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 21:20:35.688334] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 21:30:47.688406] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 21:30:47.688500] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 21:30:47.688552] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 21:40:59.689550] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 21:40:59.689656] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 21:40:59.689722] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 21:51:11.688908] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 21:51:11.689022] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 21:51:11.689091] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 22:01:23.689165] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 22:01:23.689278] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 22:01:23.689351] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 22:11:35.689464] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 22:11:35.689594] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 22:11:35.689687] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 22:21:47.689769] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 22:21:47.689893] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 22:21:47.689949] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 22:31:59.690046] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 22:31:59.690145] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 22:31:59.690192] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 22:42:11.690447] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 22:42:11.690551] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 22:42:11.690618] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 22:52:23.690882] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 22:52:23.690982] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 22:52:23.691042] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 23:02:35.691371] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 23:02:35.691494] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 23:02:35.691577] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 23:12:47.691787] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 23:12:47.691898] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 23:12:47.691965] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 23:22:59.692126] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 23:22:59.692242] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 23:22:59.692346] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 23:33:11.692562] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 23:33:11.692674] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 23:33:11.692739] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 23:43:23.692912] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 23:43:23.693035] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 23:43:23.693112] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-13 23:53:35.693892] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-13 23:53:35.694013] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-13 23:53:35.694087] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 00:03:47.693861] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 00:03:47.693969] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 00:03:47.694029] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 00:13:59.694112] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 00:13:59.694222] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 00:13:59.694300] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 00:24:11.698039] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 00:24:11.698141] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 00:24:11.698189] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 00:34:23.694776] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 00:34:23.694882] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 00:34:23.694930] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 00:44:35.695716] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 00:44:35.695825] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 00:44:35.695901] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 00:54:47.695270] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 00:54:47.695364] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 00:54:47.695431] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 01:04:59.695199] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 01:04:59.695322] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 01:04:59.695372] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 01:15:11.695158] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 01:15:11.695272] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 01:15:11.695327] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 01:25:23.694943] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 01:25:23.695076] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 01:25:23.695149] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 01:35:35.694826] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 01:35:35.694947] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 01:35:35.695026] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 01:45:47.694720] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 01:45:47.694849] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 01:45:47.694956] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 01:46:41.107752] 20190611.01 - INFO - IRC - :Igloo_!~Igloo@ks383241.kimsufi.com JOIN :#ibot
+[2019-06-14 01:55:59.694822] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 01:55:59.694925] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 01:55:59.694973] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 01:57:12.997405] 20190611.01 - INFO - IRC - :Igloo!~Igloo@ks383241.kimsufi.com QUIT :se.hub efnet.port80.se
+[2019-06-14 02:06:11.694246] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 02:06:11.694357] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 02:06:11.694420] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 02:16:23.694183] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 02:16:23.694340] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 02:16:23.694463] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 02:26:35.693841] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 02:26:35.693959] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 02:26:35.694036] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 02:36:47.693383] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 02:36:47.693487] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 02:36:47.693535] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 02:46:59.692987] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 02:46:59.693092] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 02:46:59.693162] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 02:57:11.692881] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 02:57:11.693038] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 02:57:11.693100] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 03:07:23.692287] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 03:07:23.692444] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 03:07:23.692556] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 03:17:35.692241] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 03:17:35.692338] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 03:17:35.692412] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 03:27:47.691636] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 03:27:47.691744] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 03:27:47.691795] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 03:29:51.601735] 20190611.01 - INFO - IRC - :Igloo_!~Igloo@ks383241.kimsufi.com QUIT :hub.efnet.us irc.efnet.nl
+[2019-06-14 03:37:59.691076] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 03:37:59.691229] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 03:37:59.691331] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 03:48:11.690914] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 03:48:11.691061] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 03:48:11.691136] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 03:51:02.945495] 20190611.01 - INFO - IRC - :Igloo_!~Igloo@ks383241.kimsufi.com JOIN :#ibot
+[2019-06-14 03:58:23.690749] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 03:58:23.690846] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 03:58:23.690896] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 04:08:35.690272] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 04:08:35.690373] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 04:08:35.690427] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 04:18:47.689964] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 04:18:47.690085] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 04:18:47.690147] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 04:28:59.691826] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 04:28:59.691940] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 04:28:59.691991] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net
+[2019-06-14 04:39:11.689034] 20190611.01 - INFO - IRC - PING :irc.servercentral.net
+[2019-06-14 04:39:11.689193] 20190611.01 - INFO - Received message PING :irc.servercentral.net
+[2019-06-14 04:39:11.689287] 20190611.01 - INFO - IRC - PONG :irc.servercentral.net

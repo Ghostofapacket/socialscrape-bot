@@ -1,7 +1,7 @@
 # variables to be changed
 version = 20190611.01
 irc_channel_bot = '#ibot'
-irc_nick = 'socialbot2'
+irc_nick = 'socialbot'
 irc_server_name = 'irc.servercentral.net'
 irc_server_port = 6667
 log_file_name = 'log.log'
