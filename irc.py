@@ -30,8 +30,9 @@ class IRC(threading.Thread):
         self.messages_sent = []
         self.commands_received = []
         self.commands_sent = []
-        self.running_instagram = []
-        self.processpool = Pool(processes=1)
+#        self.running_instagram = []
+#        self.running_instagram = 0
+#        self.processpool = Pool(processes=1)
 
     def run(self):
         self.connect()
@@ -101,8 +102,7 @@ class IRC(threading.Thread):
                                                'channel': channel})
                         self.command(command, user, channel)
                         settings.logger.log('COMMAND - Received in channel {channel} - {command[0]}'.format(**locals()))
-            elif re.search(r'^:.+PRIVMSG[^:]+:socialbot\:', message):
-                    if re.search(r'^:.+PRIVMSG[^:]+:socialbot\: .*', message):
+                    elif re.search(r'^:.+PRIVMSG[^:]+:socialbot\: .*', message):
                         command = re.search(r'^:.+PRIVMSG[^:]+:socialbot\: (.*)', message) \
                              .group(1).strip().split(' ')
                         command = [s.strip() for s in command if len(s.strip()) != 0]
@@ -129,7 +129,7 @@ class IRC(threading.Thread):
         jobid = sha_1.hexdigest()
         return jobid
 
-    def run_snscrape(self, channel, user, module, target):
+    def run_snscrape(self, channel, user, module, target, **kwargs):
         jobid = self.getjobid(user + '-' + module + '-' + target)
         settings.logger.log('SNSCRAPE - Job ID ' + jobid)
         self.send('PRIVMSG', '{user}: {jobid} has been queued.' .format(user=user, jobid=jobid), channel)
@@ -169,6 +169,19 @@ class IRC(threading.Thread):
                 uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-#" + jobid + " https://transfer.notkiska.pw/twitter-#" + quote(sanityregex.sub(r'',target)), shell=True).decode("utf-8")
                 newtarget = sanityregex.sub(r'',target)
 
+            if str(module).startswith("twitter-search"):
+                maxpages = kwargs.get('maxpages', None)
+                if not maxpages is None:
+                    subprocess.run("snscrape twitter-search --max-position " + maxpages + " " + quote(sanityregex.sub(r'',target)) + " >jobs/twitter-search-" + jobid, shell=True)
+                    settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module  + " " + sanityregex.sub(r'',target) + " maxpages set")
+                    uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-search-" + jobid + " https://transfer.notkiska.pw/twitter-search-" + quote(sanityregex.sub(r'',target)), shell=True).decode("utf-8")
+                    newtarget = sanityregex.sub(r'',target)
+                if maxpages is None:
+                    subprocess.run("snscrape twitter-search " + quote(sanityregex.sub(r'',target)) + " >jobs/twitter-search-" + jobid, shell=True)
+                    settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
+                    uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-search-" + jobid + " https://transfer.notkiska.pw/twitter-search-" + quote(sanityregex.sub(r'',target)), shell=True).decode("utf-8")
+                    newtarget = sanityregex.sub(r'',target)
+
             if not newtarget is None:
                 if uploadedurl.startswith("400"):
                     self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid}'.format(user=user,jobid=jobid),channel)
@@ -180,6 +193,10 @@ class IRC(threading.Thread):
                           .format(user=user, uploadedurl=uploadedurl, jobid=jobid), channel)
 
         if str(module).startswith("instagram"):
+            while os.path.isfile('Instagram_run'):
+                settings.logger.log('SNSCRAPE - instagram scrape already in progress, sleeping for 5 seconds')
+                time.sleep(5)
+            open('Instagram_run', 'w').close()
             if str(module).startswith("instagram-user"):
                 settings.logger.log("snscrape --format '{dirtyUrl}'  " + module + " " + sanityregex.sub(r'',target) + " >jobs/instagram-@" + jobid)
                 subprocess.run("snscrape --format '{dirtyUrl}'  " + quote(module) + " " + quote(sanityregex.sub(r'',target)) + " >jobs/instagram-@" + jobid, shell=True)
@@ -212,7 +229,6 @@ class IRC(threading.Thread):
                 else:
                     self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid} - Hashtag does not exist'.format(user=user,jobid=jobid),channel)
                     jobfile = "jobs/instagram-#" + jobid
-
             if not os.stat(jobfile).st_size == 0:
                 #Should be standard for all jobs
                 if uploadedurl.startswith("400"):
@@ -223,10 +239,11 @@ class IRC(threading.Thread):
                     uploadedurl = uploadedurl.replace('%40','@')
                     self.send('PRIVMSG', '!a < {uploadedurl} --explain "For {user} - socialscrape job {jobid}"' \
                           .format(user=user, uploadedurl=uploadedurl, jobid=jobid), channel)
-                    time.sleep(3)
+                    time.sleep(5)
                     ignoreregex = "^https?://www\.instagram\.com/.*[?&]hl="
                     self.send('PRIVMSG', '!ignore {jobid} {ignoreregex}' \
                          .format(jobid=archivebotid,ignoreregex=ignoreregex),channel)
+                os.remove('Instagram_run')
 
     def command(self, command, user, channel):
         if command[0] == 'help':
@@ -263,8 +280,13 @@ class IRC(threading.Thread):
                     target = command[2]
                     try:
                         args = command[3]
-                        runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
-                        runsnscrape.start()
+                        print(args)
+                        if str(args) != "maxpages":
+                            self.send('PRIVMSG', user + ': Sorry, Command not recognised. Did you mean "maxpages" ?'.format(user=user), channel)
+                        else:
+                            keywords = {'maxpages': command[4]}
+                            runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target), kwargs=keywords)
+                            runsnscrape.start()
                     except IndexError:
                         runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
                         runsnscrape.start()
@@ -275,13 +297,15 @@ class IRC(threading.Thread):
                     target = command[2]
                     try:
                         args = command[3]
-                        runsnscrape = self.processpool.apply_async(self.run_snscrape, args=(channel, user, module, target))
-                        self.running_instagram.append(runsnscrape)
+                        runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
+                        runsnscrape.start()
+#                        runsnscrape = self.processpool.apply_async(self.run_snscrape, args=(channel, user, module, target))
+#                        self.running_instagram.append(runsnscrape)
                     except IndexError:
-#                        runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
-                        runsnscrape = self.processpool.apply_async(self.run_snscrape, args=(channel, user, module, target))
-                        self.running_instagram.append(runsnscrape)
-#                        runsnscrape.start()
+                        runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
+                        runsnscrape.start()
+#                        runsnscrape = self.processpool.apply_async(self.run_snscrape, args=(channel, user, module, target))
+#                        self.running_instagram.append(runsnscrape)
                 if function == 'gab':
                     # whatevenisgab?
                     settings.logger.log('gab')
