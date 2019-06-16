@@ -163,13 +163,30 @@ class IRC(threading.Thread):
                     outfile.close()
                     uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-@" + jobid + " https://transfer.notkiska.pw/twitter-@" + newtarget, shell=True).decode("utf-8")
 
-            if str(module).startswith("twitter-hash"):
+            elif str(module).startswith("twitter-hash"):
                 subprocess.run("snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + quote(module) + " " + quote(sanityregex.sub(r'',target)) + " >jobs/twitter-#" + jobid, shell=True)
-                settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
-                uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-#" + jobid + " https://transfer.notkiska.pw/twitter-#" + quote(sanityregex.sub(r'',target)), shell=True).decode("utf-8")
+                settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + '-' + sanityregex.sub(r'',target))
+                settings.logger.log("CURL - Uploading with curl -s --upload-file jobs/twitter-#" + jobid + " https://transfer.notkiska.pw/twitter-#" + sanityregex.sub(r'',target))
+                outfile = open("jobs/twitter-#" + jobid, "r")
+                hashline1 = "https://www.twitter.com/hashtag/" + target + "\n"
+                hashline2 = "https://www.twitter.com/hashtag/" + target + "?src=hash\n"
+                hashline3 = "https://www.twitter.com/hashtag/" + target + "?f=tweets&vertical=default\n"
+                hashline4 = "https://www.twitter.com/hashtag/" + target + "?f=tweets&vertical=default&src=hash\n"
+                lines = []
+                for line in outfile.read().split():
+                    lines.append(line + "\n")
+                lines.insert(0,hashline4)
+                lines.insert(0,hashline3)
+                lines.insert(0,hashline2)
+                lines.insert(0,hashline1)
+                outfile.close()
+                outfile=open("jobs/twitter-#" + jobid, "w")
+                outfile.writelines(lines)
+                outfile.close()
+                uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-#" + jobid + " https://transfer.notkiska.pw/twitter-%23" + quote(sanityregex.sub(r'',target)), shell=True).decode("utf-8")
                 newtarget = sanityregex.sub(r'',target)
 
-            if str(module).startswith("twitter-search"):
+            elif str(module).startswith("twitter-search"):
                 maxpages = kwargs.get('maxpages', None)
                 if not maxpages is None:
                     subprocess.run("snscrape twitter-search --max-position " + maxpages + " " + quote(sanityregex.sub(r'',target)) + " >jobs/twitter-search-" + jobid, shell=True)
@@ -181,6 +198,9 @@ class IRC(threading.Thread):
                     settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
                     uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-search-" + jobid + " https://transfer.notkiska.pw/twitter-search-" + quote(sanityregex.sub(r'',target)), shell=True).decode("utf-8")
                     newtarget = sanityregex.sub(r'',target)
+            else:
+                    settings.logger.log('SNSCRAPE - Command not found')
+                    bot.send('PRIVMSG', 'Sorry {user} command not found'.format(user=user), channel)
 
             if not newtarget is None:
                 if uploadedurl.startswith("400"):
@@ -218,7 +238,7 @@ class IRC(threading.Thread):
                     self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid} - User does not exist'.format(user=user,jobid=jobid),channel)
                     jobfile = "jobs/instagram-@" + jobid
 
-            if str(module).startswith("instagram-hashtag"):
+            elif str(module).startswith("instagram-hashtag"):
                 subprocess.run("snscrape --format '{dirtyUrl}'  " + quote(module) + " " + quote(sanityregex.sub(r'',target)) + " >jobs/instagram-#" + jobid, shell=True)
                 if not os.stat("jobs/instagram-#" + jobid).st_size == 0:
                     settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
@@ -229,6 +249,10 @@ class IRC(threading.Thread):
                 else:
                     self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid} - Hashtag does not exist'.format(user=user,jobid=jobid),channel)
                     jobfile = "jobs/instagram-#" + jobid
+            else:
+                    settings.logger.log('SNSCRAPE - Command not found')
+                    bot.send('PRIVMSG', 'Sorry {user} command not found'.format(user=user), channel)
+
             if not os.stat(jobfile).st_size == 0:
                 #Should be standard for all jobs
                 if uploadedurl.startswith("400"):
@@ -291,7 +315,7 @@ class IRC(threading.Thread):
                         runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
                         runsnscrape.start()
 
-                if function.startswith('instagram'):
+                if function.startswith('instagram-'):
                     # sendnudez
                     module = command[1]
                     target = command[2]
@@ -316,5 +340,5 @@ class IRC(threading.Thread):
                     # faceballs
                     settings.logger.log('faceballs')
             except IndexError:
-                self.send('PRIVMSG', user + ': Missing site; try ' + self.nick + ' snscrape facebook,gab,instagram'\
-                          + ',twitter,vkontake etc'.format(user=user), channel)
+                self.send('PRIVMSG', user + ': Missing site; try ' + self.nick + ' snscrape instagram-user,instagram-hashtag'\
+                          + ',twitter-user,twitter-hashtag,twitter-search'.format(user=user), channel)
