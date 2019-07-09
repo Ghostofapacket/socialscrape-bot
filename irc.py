@@ -227,19 +227,15 @@ class IRC(threading.Thread):
                     self.send('PRIVMSG', '{user}: Sorry, No results found for {jobid} - User does not exist / profile is set to private' .format(user=user, jobid=jobid), channel)
                 else:
                     settings.logger.log("SNSCRAPE - Running with updated settings - snscrape " + quote(module) + " " + newtarget.strip() + " >jobs/facebook-@" + jobid)
-                    subprocess.run("snscrape " + quote(module) + " " + newtarget.strip() + " >jobs/facebook-@" + jobid, shell=True)
+                    subprocess.run("snscrape --format '{cleanUrl} {outlinksss}' " + quote(module) + " " + newtarget.strip() + " >jobs/facebook-@" + jobid, shell=True)
                     settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
-                    #Insert the profile as per JAA's request :-)
-                    outfile = open("jobs/facebook-@" + jobid, "r")
-                    profileline = "https://www.facebook.com/" + newtarget.strip() + "\n"
-                    lines = []
-                    for line in outfile.read().split():
-                        lines.append(line + "\n")
-                    lines.insert(0,profileline)
-                    outfile.close()
-                    outfile=open("jobs/facebook-@" + jobid, "w")
-                    outfile.writelines(lines)
-                    outfile.close()
+                    profileline = "https://www.facebook.com/" + newtarget.strip() + "/"
+                    lines = [profileline + "\n"]
+                    with open("jobs/facebook-@" + jobid, "r") as outfile:
+                        for line in outfile.read().split():
+                            lines.append(line + "\n")
+                    with open("jobs/facebook-@" + jobid, "w") as outfile:
+                        outfile.writelines(lines)
                     uploadedurl = subprocess.check_output("curl -s --upload-file jobs/facebook-@" + jobid + " https://transfer.notkiska.pw/facebook-@" + newtarget, shell=True).decode("utf-8")
             if not newtarget is None:
                 if uploadedurl.startswith("400"):
@@ -250,7 +246,7 @@ class IRC(threading.Thread):
                     uploadedurl = uploadedurl.replace('%40','@')
                     self.send('PRIVMSG', '!ao < {uploadedurl} --explain "For {user} - socialscrape job {jobid}" ' \
                           .format(user=user, uploadedurl=uploadedurl, jobid=jobid), channel)
-                    self.send('PRIVMSG', 'chromebot: a https://www.facebook.com/{target}'.format(target=newtarget), channel)
+                    self.send('PRIVMSG', 'chromebot: a https://www.facebook.com/{target}/'.format(target=newtarget), channel)
 
         if str(module).startswith("instagram"):
             while os.path.isfile('Instagram_run'):
