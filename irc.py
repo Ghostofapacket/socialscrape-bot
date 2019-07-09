@@ -152,7 +152,7 @@ class IRC(threading.Thread):
                     settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
                     #Insert the profile as per JAA's request :-)
                     outfile = open("jobs/twitter-@" + jobid, "r")
-                    profileline = "https://www.twitter.com/" + target + "\n"
+                    profileline = "https://www.twitter.com/" + newtarget.strip() + "\n"
                     lines = []
                     for line in outfile.read().split():
                         lines.append(line + "\n")
@@ -211,6 +211,46 @@ class IRC(threading.Thread):
                     uploadedurl = uploadedurl.replace('%40','@')
                     self.send('PRIVMSG', '!ao < {uploadedurl} --explain "For {user} - socialscrape job {jobid}" --concurrency 6 --delay 0' \
                           .format(user=user, uploadedurl=uploadedurl, jobid=jobid), channel)
+                    self.send('PRIVMSG', 'chromebot: a https://twitter.com/{target}'.format(target=newtarget), channel)
+
+        if str(module).startswith("facebook"):
+            if str(module).startswith("facebook-user"):
+                settings.logger.log('SNSCRAPE - Checking username capitalisation for user ' + sanityregex.sub(r'',target))
+                try:
+                    print("curl -s -A 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36' -H 'Accept-Language: en-US,en;q=0.5' \"https://www.facebook.com/" + sanityregex.sub(r'',target) + "/\" | grep -Po '<div\s[^>]*(?<=\s)data-key\s*=\s*\"tab_home\".*?</div>' | grep -Po '<a\s[^>]*(?<=\s)href=\"/\K[^/]+'")
+                    newtarget = subprocess.check_output("curl -s -A 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36' -H 'Accept-Language: en-US,en;q=0.5' \"https://www.facebook.com/" + sanityregex.sub(r'',target) + "/\" | grep -Po '<div\s[^>]*(?<=\s)data-key\s*=\s*\"tab_home\".*?</div>' | grep -Po '<a\s[^>]*(?<=\s)href=\"/\K[^/]+'", shell=True).decode("utf-8")
+                    print(newtarget)
+                except subprocess.CalledProcessError as error:
+                    newtarget = None
+                if newtarget is None:
+                    settings.logger.log("SNSCRAPE - Facebook user " + quote(sanityregex.sub(r'',target)) + " not found")
+                    self.send('PRIVMSG', '{user}: Sorry, No results found for {jobid} - User does not exist / profile is set to private' .format(user=user, jobid=jobid), channel)
+                else:
+                    settings.logger.log("SNSCRAPE - Running with updated settings - snscrape " + quote(module) + " " + newtarget.strip() + " >jobs/facebook-@" + jobid)
+                    subprocess.run("snscrape " + quote(module) + " " + newtarget.strip() + " >jobs/facebook-@" + jobid, shell=True)
+                    settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
+                    #Insert the profile as per JAA's request :-)
+                    outfile = open("jobs/facebook-@" + jobid, "r")
+                    profileline = "https://www.facebook.com/" + newtarget.strip() + "\n"
+                    lines = []
+                    for line in outfile.read().split():
+                        lines.append(line + "\n")
+                    lines.insert(0,profileline)
+                    outfile.close()
+                    outfile=open("jobs/facebook-@" + jobid, "w")
+                    outfile.writelines(lines)
+                    outfile.close()
+                    uploadedurl = subprocess.check_output("curl -s --upload-file jobs/facebook-@" + jobid + " https://transfer.notkiska.pw/facebook-@" + newtarget, shell=True).decode("utf-8")
+            if not newtarget is None:
+                if uploadedurl.startswith("400"):
+                    self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid}'.format(user=user,jobid=jobid),channel)
+                elif uploadedurl.startswith("Could not upload empty file"):
+                    self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid}'.format(user=user,jobid=jobid),channel)
+                else:
+                    uploadedurl = uploadedurl.replace('%40','@')
+                    self.send('PRIVMSG', '!ao < {uploadedurl} --explain "For {user} - socialscrape job {jobid}" ' \
+                          .format(user=user, uploadedurl=uploadedurl, jobid=jobid), channel)
+                    self.send('PRIVMSG', 'chromebot: a https://www.facebook.com/{target}'.format(target=newtarget), channel)
 
         if str(module).startswith("instagram"):
             while os.path.isfile('Instagram_run'):
@@ -224,7 +264,7 @@ class IRC(threading.Thread):
                     settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-@" + sanityregex.sub(r'',target))
                     #Insert the profile as per JAA's request :-)
                     outfile = open("jobs/instagram-@" + jobid, "r")
-                    profileline = "https://www.instagram.com/" + target + "\n"
+                    profileline = "https://www.instagram.com/" + target + "/\n"
                     lines = outfile.readlines()
                     lines.insert(0,profileline)
                     outfile.close()
@@ -237,6 +277,7 @@ class IRC(threading.Thread):
                 else:
                     self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid} - User does not exist'.format(user=user,jobid=jobid),channel)
                     jobfile = "jobs/instagram-@" + jobid
+                    os.remove('Instagram_run')
 
             elif str(module).startswith("instagram-hashtag"):
                 subprocess.run("snscrape --format '{dirtyUrl}'  " + quote(module) + " " + quote(sanityregex.sub(r'',target)) + " >jobs/instagram-#" + jobid, shell=True)
@@ -249,6 +290,7 @@ class IRC(threading.Thread):
                 else:
                     self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid} - Hashtag does not exist'.format(user=user,jobid=jobid),channel)
                     jobfile = "jobs/instagram-#" + jobid
+                    os.remove('Instagram_run')
             else:
                     settings.logger.log('SNSCRAPE - Command not found')
                     bot.send('PRIVMSG', 'Sorry {user} command not found'.format(user=user), channel)
@@ -336,9 +378,12 @@ class IRC(threading.Thread):
                 if function == 'vkontakte':
                     # imgonatakte
                     settings.logger.log('vkon')
-                if function == 'facebook':
+                if function.startswith('facebook'):
                     # faceballs
-                    settings.logger.log('faceballs')
+                    module = command[1]
+                    target = command[2]
+                    runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
+                    runsnscrape.start()
             except IndexError:
                 self.send('PRIVMSG', user + ': Missing site; try ' + self.nick + ' snscrape instagram-user,instagram-hashtag'\
                           + ',twitter-user,twitter-hashtag,twitter-search'.format(user=user), channel)
