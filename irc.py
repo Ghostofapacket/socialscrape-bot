@@ -136,6 +136,7 @@ class IRC(threading.Thread):
         settings.logger.log('SNSCRAPE - Trying to run snscrape with the following arguments - {module} - {target}' \
                             .format(**locals()))
         sanityregex = re.compile('([\"\'\@\#])')
+        chromeboturls = None
         if str(module).startswith("twitter"):
             if str(module).startswith("twitter-user"):
                 settings.logger.log('SNSCRAPE - Checking username capitalisation for user ' + sanityregex.sub(r'',target))
@@ -151,40 +152,33 @@ class IRC(threading.Thread):
                     subprocess.run("snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + quote(module) + " " + newtarget.strip() + " >jobs/twitter-@" + jobid, shell=True)
                     settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
                     #Insert the profile as per JAA's request :-)
-                    outfile = open("jobs/twitter-@" + jobid, "r")
-                    profileline = "https://www.twitter.com/" + newtarget.strip() + "\n"
-                    lines = []
-                    for line in outfile.read().split():
-                        lines.append(line + "\n")
-                    lines.insert(0,profileline)
-                    outfile.close()
-                    outfile=open("jobs/twitter-@" + jobid, "w")
-                    outfile.writelines(lines)
-                    outfile.close()
+                    profileline = "https://twitter.com/" + newtarget.strip()
+                    lines = [profileline + "\n"]
+                    with open("jobs/twitter-@" + jobid, "r") as outfile:
+                        for line in outfile.read().split():
+                            lines.append(line + "\n")
+                    with open("jobs/twitter-@" + jobid, "w") as outfile:
+                        outfile.writelines(lines)
                     uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-@" + jobid + " https://transfer.notkiska.pw/twitter-@" + newtarget, shell=True).decode("utf-8")
+                    chromeboturls = [profileline]
 
             elif str(module).startswith("twitter-hash"):
                 subprocess.run("snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + quote(module) + " " + quote(sanityregex.sub(r'',target)) + " >jobs/twitter-#" + jobid, shell=True)
                 settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + '-' + sanityregex.sub(r'',target))
                 settings.logger.log("CURL - Uploading with curl -s --upload-file jobs/twitter-#" + jobid + " https://transfer.notkiska.pw/twitter-#" + sanityregex.sub(r'',target))
-                outfile = open("jobs/twitter-#" + jobid, "r")
-                hashline1 = "https://www.twitter.com/hashtag/" + target + "\n"
-                hashline2 = "https://www.twitter.com/hashtag/" + target + "?src=hash\n"
-                hashline3 = "https://www.twitter.com/hashtag/" + target + "?f=tweets&vertical=default\n"
-                hashline4 = "https://www.twitter.com/hashtag/" + target + "?f=tweets&vertical=default&src=hash\n"
                 lines = []
-                for line in outfile.read().split():
-                    lines.append(line + "\n")
-                lines.insert(0,hashline4)
-                lines.insert(0,hashline3)
-                lines.insert(0,hashline2)
-                lines.insert(0,hashline1)
-                outfile.close()
-                outfile=open("jobs/twitter-#" + jobid, "w")
-                outfile.writelines(lines)
-                outfile.close()
+                lines.append("https://twitter.com/hashtag/" + target + "\n")
+                lines.append("https://twitter.com/hashtag/" + target + "?src=hash\n")
+                lines.append("https://twitter.com/hashtag/" + target + "?f=tweets&vertical=default\n")
+                lines.append("https://twitter.com/hashtag/" + target + "?f=tweets&vertical=default&src=hash\n")
+                with open("jobs/twitter-#" + jobid, "r") as outfile:
+                    for line in outfile.read().split():
+                        lines.append(line + "\n")
+                with open("jobs/twitter-#" + jobid, "w") as outfile:
+                    outfile.writelines(lines)
                 uploadedurl = subprocess.check_output("curl -s --upload-file jobs/twitter-#" + jobid + " https://transfer.notkiska.pw/twitter-%23" + quote(sanityregex.sub(r'',target)), shell=True).decode("utf-8")
                 newtarget = sanityregex.sub(r'',target)
+                chromeboturls = [x.strip() for x in lines[:4]]
 
             elif str(module).startswith("twitter-search"):
                 maxpages = kwargs.get('maxpages', None)
@@ -211,7 +205,9 @@ class IRC(threading.Thread):
                     uploadedurl = uploadedurl.replace('%40','@')
                     self.send('PRIVMSG', '!ao < {uploadedurl} --explain "For {user} - socialscrape job {jobid}" --concurrency 6 --delay 0' \
                           .format(user=user, uploadedurl=uploadedurl, jobid=jobid), channel)
-                    self.send('PRIVMSG', 'chromebot: a https://twitter.com/{target}'.format(target=newtarget), channel)
+                    if chromeboturls:
+                        for url in chromeboturls:
+                            self.send('PRIVMSG', 'chromebot: a {url}'.format(url=url), channel)
 
         if str(module).startswith("facebook"):
             if str(module).startswith("facebook-user"):
