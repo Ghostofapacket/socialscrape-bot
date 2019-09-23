@@ -44,7 +44,7 @@ class IRC(threading.Thread):
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server.connect((self.server_name, self.server_port))
         self.send('USER', '{nick} {nick} {nick} :I am a bot; '
-                           'https://github.com/Ghostofapacket/iBot/.'
+                           'https://github.com/Ghostofapacket/socialbot/.'
                    .format(nick=self.nick))
         self.send('NICK', '{nick}'.format(nick=self.nick))
         self.send('JOIN', '{channel_bot}'.format(
@@ -141,18 +141,18 @@ class IRC(threading.Thread):
             if str(module).startswith("twitter-user"):
                 settings.logger.log('SNSCRAPE - Checking username capitalisation for user ' + sanityregex.sub(r'',target))
                 try:
-                    newtarget = subprocess.check_output("snscrape --max-results 1 twitter-user " + quote(sanityregex.sub(r'',target)) + " | grep -Po '^https?://twitter\.com/\K[^/]+'", shell=True).decode("utf-8")
+                    newtarget = subprocess.check_output("snscrape --max-results 1 twitter-user " + quote(sanityregex.sub(r'',target)) + " | grep -Po '^https?://twitter\.com/\K[^/]+'", shell=True).decode("utf-8").strip()
                 except subprocess.CalledProcessError as error:
                     newtarget = None
                 if newtarget is None:
                     settings.logger.log("SNSCRAPE - Twitter user " + quote(sanityregex.sub(r'',target)) + " not found")
                     self.send('PRIVMSG', '{user}: Sorry, No results found for {jobid} - User does not exist' .format(user=user, jobid=jobid), channel)
                 else:
-                    settings.logger.log("SNSCRAPE - Running with updated settings - snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + quote(module) + " " + newtarget.strip() + " >jobs/twitter-@" + jobid)
-                    subprocess.run("snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + quote(module) + " " + newtarget.strip() + " >jobs/twitter-@" + jobid, shell=True)
+                    settings.logger.log("SNSCRAPE - Running with updated settings - snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + quote(module) + " " + newtarget + " >jobs/twitter-@" + jobid)
+                    subprocess.run("snscrape --format '{url} {tcooutlinksss} {outlinksss}'  " + quote(module) + " " + newtarget + " >jobs/twitter-@" + jobid, shell=True)
                     settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
                     #Insert the profile as per JAA's request :-)
-                    profileline = "https://twitter.com/" + newtarget.strip()
+                    profileline = "https://twitter.com/" + newtarget
                     lines = [profileline + "\n"]
                     with open("jobs/twitter-@" + jobid, "r") as outfile:
                         for line in outfile.read().split():
@@ -203,7 +203,7 @@ class IRC(threading.Thread):
                     self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid}'.format(user=user,jobid=jobid),channel)
                 else:
                     uploadedurl = uploadedurl.replace('%40','@')
-                    self.send('PRIVMSG', '!ao < {uploadedurl} --explain "For {user} - socialscrape job {jobid}" --concurrency 6 --delay 0' \
+                    self.send('PRIVMSG', '!ao < {uploadedurl} --explain "For {user} - socialscrape job {jobid}"' \
                           .format(user=user, uploadedurl=uploadedurl, jobid=jobid), channel)
                     if chromeboturls:
                         for url in chromeboturls:
@@ -214,7 +214,7 @@ class IRC(threading.Thread):
                 settings.logger.log('SNSCRAPE - Checking username capitalisation for user ' + sanityregex.sub(r'',target))
                 try:
                     print("curl -s -A 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36' -H 'Accept-Language: en-US,en;q=0.5' \"https://www.facebook.com/" + sanityregex.sub(r'',target) + "/\" | grep -Po '<div\s[^>]*(?<=\s)data-key\s*=\s*\"tab_home\".*?</div>' | grep -Po '<a\s[^>]*(?<=\s)href=\"/\K[^/]+'")
-                    newtarget = subprocess.check_output("curl -s -A 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36' -H 'Accept-Language: en-US,en;q=0.5' \"https://www.facebook.com/" + sanityregex.sub(r'',target) + "/\" | grep -Po '<div\s[^>]*(?<=\s)data-key\s*=\s*\"tab_home\".*?</div>' | grep -Po '<a\s[^>]*(?<=\s)href=\"/\K[^/]+'", shell=True).decode("utf-8")
+                    newtarget = subprocess.check_output("curl -s -A 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36' -H 'Accept-Language: en-US,en;q=0.5' \"https://www.facebook.com/" + sanityregex.sub(r'',target) + "/\" | grep -Po '<div\s[^>]*(?<=\s)data-key\s*=\s*\"tab_home\".*?</div>' | grep -Po '<a\s[^>]*(?<=\s)href=\"/\K[^/]+'", shell=True).decode("utf-8").strip()
                     print(newtarget)
                 except subprocess.CalledProcessError as error:
                     newtarget = None
@@ -222,10 +222,10 @@ class IRC(threading.Thread):
                     settings.logger.log("SNSCRAPE - Facebook user " + quote(sanityregex.sub(r'',target)) + " not found")
                     self.send('PRIVMSG', '{user}: Sorry, No results found for {jobid} - User does not exist / profile is set to private' .format(user=user, jobid=jobid), channel)
                 else:
-                    settings.logger.log("SNSCRAPE - Running with updated settings - snscrape " + quote(module) + " " + newtarget.strip() + " >jobs/facebook-@" + jobid)
-                    subprocess.run("snscrape --format '{cleanUrl} {outlinksss}' " + quote(module) + " " + newtarget.strip() + " >jobs/facebook-@" + jobid, shell=True)
+                    settings.logger.log("SNSCRAPE - Running with updated settings - snscrape " + quote(module) + " " + newtarget + " >jobs/facebook-@" + jobid)
+                    subprocess.run("snscrape --format '{cleanUrl} {outlinksss}' " + quote(module) + " " + newtarget + " >jobs/facebook-@" + jobid, shell=True)
                     settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
-                    profileline = "https://www.facebook.com/" + newtarget.strip() + "/"
+                    profileline = "https://www.facebook.com/" + newtarget + "/"
                     lines = [profileline + "\n"]
                     with open("jobs/facebook-@" + jobid, "r") as outfile:
                         for line in outfile.read().split():
@@ -295,18 +295,38 @@ class IRC(threading.Thread):
                     self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid}'.format(user=user,jobid=jobid),channel)
                 else:
                     uploadedurl = uploadedurl.replace('%40','@')
-                    self.send('PRIVMSG', '!a < {uploadedurl} --explain "For {user} - socialscrape job {jobid}"' \
+                    self.send('PRIVMSG', '!a < {uploadedurl} --explain "For {user} - socialscrape job {jobid}" --igset instagram' \
                           .format(user=user, uploadedurl=uploadedurl, jobid=jobid), channel)
-                    time.sleep(5)
-                    ignoreregex = "^https?://www\.instagram\.com/.*[?&]hl="
-                    self.send('PRIVMSG', '!ignore {jobid} {ignoreregex}' \
-                         .format(jobid=archivebotid,ignoreregex=ignoreregex),channel)
                 os.remove('Instagram_run')
+
+        if str(module).startswith("vkontakte"):
+            if str(module).startswith("vkontakte-user"):
+                    newtarget = target
+                    settings.logger.log("SNSCRAPE - Running with updated settings - snscrape " + quote(module) + " " + newtarget.strip() + " >jobs/vkontakte-" + jobid)
+                    subprocess.run("snscrape " + quote(module) + " " + newtarget.strip() + " >jobs/vkontakte-" + jobid, shell=True)
+                    settings.logger.log('SNSCRAPE - Finished ' + jobid + ' - Uploading to https://transfer.notkiska.pw/' + module + "-" + sanityregex.sub(r'',target))
+                    profileline = "https://vk.com/" + newtarget.strip() + "/"
+                    lines = [profileline + "\n"]
+                    with open("jobs/vkontakte-" + jobid, "r") as outfile:
+                        for line in outfile.read().split():
+                            lines.append(line + "\n")
+                    with open("jobs/vkontakte-" + jobid, "w") as outfile:
+                        outfile.writelines(lines)
+                    uploadedurl = subprocess.check_output("curl -s --upload-file jobs/vkontakte-" + jobid + " https://transfer.notkiska.pw/vkontakte-" + newtarget, shell=True).decode("utf-8")
+            if not newtarget is None:
+                if uploadedurl.startswith("400"):
+                    self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid}'.format(user=user,jobid=jobid),channel)
+                elif uploadedurl.startswith("Could not upload empty file"):
+                    self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid}'.format(user=user,jobid=jobid),channel)
+                else:
+                    self.send('PRIVMSG', '!ao < {uploadedurl} --explain "For {user} - socialscrape job {jobid}" ' \
+                          .format(user=user, uploadedurl=uploadedurl, jobid=jobid), channel)
+                    self.send('PRIVMSG', 'chromebot: a https://vk.com/{target}/'.format(target=newtarget), channel)
 
     def command(self, command, user, channel):
         if command[0] == 'help':
             self.send('PRIVMSG', '{user}: For IRC commands can be found at -  '
-                                 'https://github.com/ghostofapacket/ibot/blob/commands.md'
+                                 'https://github.com/ghostofapacket/socialbot/blob/commands.md'
                       .format(**locals()), channel)
         elif command[0] == 'stop' and self.check_admin(user) == True:
             settings.logger.log('EMERGENCY: {user} has requested I stop'.format(**locals()))
@@ -367,9 +387,11 @@ class IRC(threading.Thread):
                 if function == 'gab':
                     # whatevenisgab?
                     settings.logger.log('gab')
-                if function == 'vkontakte':
-                    # imgonatakte
-                    settings.logger.log('vkon')
+                if function == 'vkontakte-user':
+                    module = command[1]
+                    target = command[2]
+                    runsnscrape = Process(target=self.run_snscrape, args=(channel, user, module, target))
+                    runsnscrape.start()
                 if function.startswith('facebook'):
                     # faceballs
                     module = command[1]
