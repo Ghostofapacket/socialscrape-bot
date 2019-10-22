@@ -12,6 +12,12 @@ The current live deployment runs in #archivebot on EFNet
 socialbot snscrape FUNCTION target
 ```
 
+#### Example
+
+```
+socialbot snscrape twitter-user realDonaldTrump
+```
+
 Supported Sites
 =============
 
