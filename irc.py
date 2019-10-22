@@ -240,9 +240,12 @@ class IRC(threading.Thread):
                     self.send('PRIVMSG', '{user}: Sorry, No results returned for {jobid}'.format(user=user,jobid=jobid),channel)
                 else:
                     uploadedurl = uploadedurl.replace('%40','@')
-                    self.send('PRIVMSG', '!ao < {uploadedurl} --explain "For {user} - socialscrape job {jobid}" ' \
+                    self.send('PRIVMSG', '!ao < {uploadedurl} --useragent firefox --explain "For {user} - socialscrape job {jobid}" ' \
                           .format(user=user, uploadedurl=uploadedurl, jobid=jobid), channel)
                     self.send('PRIVMSG', 'chromebot: a https://www.facebook.com/{target}/'.format(target=newtarget), channel)
+            else:
+                    settings.logger.log('SNSCRAPE - Command not found')
+                    bot.send('PRIVMSG', 'Sorry {user} command not found'.format(user=user), channel)
 
         if str(module).startswith("instagram"):
             while os.path.isfile('Instagram_run'):
