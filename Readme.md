@@ -18,13 +18,13 @@ Supported Sites
 The current list of sites is below;
 
 * Facebook
-** facebook-user
+    * facebook-user
 * Twitter
-** twitter-hashtag
-** twitter-search
-** twitter-user
+    * twitter-hashtag
+    * twitter-search
+    * twitter-user
 * Instagram
-** instagram-hashtag
-** instagram-user
+    * instagram-hashtag
+    * instagram-user
 * vkontakte
-** vkontakte-user
+    * vkontakte-user
